@@ -25,9 +25,16 @@ github_username: hercodecamp
 
 # Build settings
 markdown: kramdown
-theme: minima
 plugins:
   - jekyll-feed
+
+# Texture theme settings
+texture:
+  title: HER CODE CAMP
+  style: purple
+  tagline: a free computer science weekend camp for senior high school students
+    in the greater Toronto area who identify as a woman, non-binary, or transgender
+  date_format: "%b %-d, %Y"
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
