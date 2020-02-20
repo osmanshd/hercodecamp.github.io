@@ -1,5 +1,45 @@
 ---
 layout: base
+people:
+  - name: Dr. Fanny Chevalier
+    bio: Empowering People with Human-Computer Interaction Research
+    img: /assets/img/people/d9c.Fanny_Chevalier2.jpg
+  - name: Dr. Marzyeh Ghassemi
+    bio: completed her PhD at MIT where her research focused on machine learning in health care, exploring how to predict immediate and long-term patient needs to inform decisions in the intensive care unit and ambulatory care.
+    img: /assets/img/people/6f2.marzyeh_ghassemi.png
+  - name: Dr. Sheila McIlraith
+    bio: Is a Professor in the Department of Computer Science, University of Toronto. Her area of research is Artificial Intelligence.
+    img: /assets/img/people/56c.sheila_mcillraith.jpg
+  - name: Alba Nanushi
+    bio: joins us from TD Bank where she manages the Revenue Optimization Strategy for TD's Canadian Credit Cards.
+    img: /assets/img/people/c9d.AlbaNanushiPhoto1.png
+  - name: Ania Halliop
+    bio: Director of Engineering at FreshBooks where she leads data engineering and software development teams.
+    img: /assets/img/people/92d.Ania.jpeg
+  - name: Saba Zuberi
+    bio: Is a Machine Learning Scientist at Layer6.
+    img: /assets/img/people/saba_zuberi.png
+  - name: Serena McDonnell
+    bio: Serena is a cyclist, soccer player, animal lover, and Senior Data Scientist at Delphia.
+    img: /assets/img/people/27e.serena-mcdonnel.jpeg
+  - name: Karina Sidhu
+    bio: Director for channels & digital technology @ BMO
+    img: /assets/img/people/90b.karina-sidhu.JPG
+sponsors:
+  - name: Toronto CS
+    img: assets/img/sponsors/cs-toronto.png
+  - name: Toronto ECE
+    img: assets/img/sponsors/d92.ECE-UT-Signature-CYMK-White-_1_.png
+  - name: rotman
+    img: assets/img/sponsors/473.Rotman-TDMDAL-White.png
+  - name: Delphia
+    img: assets/img/sponsors/7b1.dephia-logo-2-Colour-Dark-BG-1-.png
+  - name: Layer6
+    img: assets/img/sponsors/ae6.Layer6-logo_white.png
+  - name: Freshbooks
+    img: assets/img/sponsors/148.freshbooks-logo-white.png
+  - name: Coding hive
+    img: assets/img/sponsors/22d.coding-hive-logo-large-with-text.png
 ---
 
 <div class="header">
@@ -35,7 +75,7 @@ layout: base
 
 <div class="content-wrapper">
 
-    <div class="l-box-lrg pure-g">
+    <div class="content pure-g">
         <div class="pure-u-1 pure-u-md-1-2">
             <h1>Date</h1>
             <p>May 2nd – May 3rd 2020</p>
@@ -46,7 +86,7 @@ layout: base
         </div>
     </div>
 
-    <div class="l-box-lrg">
+    <div class="content">
         <h1>The Details</h1>
         <p>
             Coding is telling the computer what to do, and is used in fields as varied as arts and design, healthcare and engineering! Interested in what computers can do? Want to get your hands dirty with code? Join us for a weekend to learn just what you, other women, and computers can do. You'll get the opportunity to learn from individuals from one of the best computer science programs offered. And the best part? It's all free, including food!
@@ -56,7 +96,7 @@ layout: base
         </p>
     </div>
 
-    <div class="l-box-lrg">
+    <div class="content">
         <h1>Tentative Schedule 2020</h1>
         <div class="pure-g">
             <div class="pure-u-1 pure-u-md-1-2">
@@ -82,7 +122,7 @@ layout: base
         </div>
     </div>
 
-    <div class="l-box-lrg">
+    <div class="content">
         <h1>Frequently Asked Questions</h1>
         <div class="pure-g">
             <div class="faq-item pure-u-1 pure-u-md-1-2 pure-u-lg-1-3">
@@ -117,10 +157,58 @@ layout: base
         </div>
     </div>
 
-    <div class="l-box-lrg">
+    <div class="content">
         <h1>I AM INTERESTED, WHAT NOW?</h1>
         <p>Applications are now open for May 2020!</p>
         <a href="https://forms.gle/kXjM6roY7onk6K3j7">APPLY HERE!</a>
+    </div>
+
+    <div class="l-box-lrg panel-people">
+        <h1>Campfire // Previous Panel + Presentations (2019)</h1>
+        <div class="pure-g">
+            {% for person in page.people %}
+            <div class="person pure-u-1 pure-u-md-1-2">
+                <div class="pure-g">
+                    <div class="img pure-u-1-2" style="background-image: url({{ person.img }})"></div>
+                    <div class="info pure-u-1-2">
+                        <div class="name">{{ person.name }}</div>
+                        <div class="bio">{{ person.bio }}</div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="who-are-we pure-g">
+        <div class="group-photo pure-u-1 pure-u-md-1-2"></div>
+        <div class="pure-u-1 pure-u-md-1-2">
+            <h1>FIRE STARTERS // WHO ARE WE?</h1>
+            <p>We are a group of fierce, female-identifying graduate students at the University of Toronto. Our fields vary from machine learning to bioinformatics to cybersecurity. Our goal is to hack the gender gap and help minority groups grow to their full potential.</p>
+            <p>Team (from top left to bottom right): Marta Skreta, Heather Gibling, Mariana D'Angelo, Yasaman Rohanifar, Seung-Eun Yi, Joanna Pineda, Brenna Li, Chantal Shaib, Armande Ang Houle, Elyssa Bader</p>
+            <p>Faculty Sponsors: Dr. Marzyeh Ghassemi, Dr. Florian Shkurti</p>
+        </div>
+     </div>
+
+    <div class="content">
+        <h1>Want to volunteer?</h1>
+        volunteer-photo.JPG
+    </div>
+
+    <div class="content">
+        <h1>Land Acknowledgement</h1>
+        <p>We wish to acknowledge the land on which the University of Toronto operates. For thousands of years it has been the traditional land of the Huron-Wendat, the Seneca, and most recently, the Mississaugas of the Credit River. Today, this meeting place is still the home to many Indigenous people from across Turtle Island and we are grateful to have the opportunity to work on this land.</p>
+    </div>
+
+    <div class="l-box-lrg sponsors">
+        <h1>Fuel // Our Sponsors</h1>
+        <div class="pure-g">
+            {% for sponsor in page.sponsors %}
+                <div class="pure-u-1 pure-u-md-1-2">
+                    <div class="sponsor" style="background-image: url('{{ sponsor.img }}');"></div>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 
 </div>

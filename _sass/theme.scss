@@ -256,3 +256,57 @@ header {
     }
   }
 }
+
+// HCC styles
+
+.content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.panel-people {
+  .person {
+    padding: 1em;
+    .img {
+      @media screen and (min-width: 35.5em) {
+        width: 200px;
+        height: 200px;
+      }
+      @media screen and (min-width: 48em) {
+        width: 140px;
+        height: 140px;
+      }
+      @media screen and (min-width: 64em) {
+        width: 200px;
+        height: 200px;
+      }
+      background-size: cover;
+      box-shadow: 5px 5px 0px 0px black;
+    }
+    .info {
+      padding: 0 1em;
+      .name {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.who-are-we {
+  .group-photo {
+    background-image: url("/assets/img/people/hcc-exec-group-photo.jpg");
+    background-size: cover;
+  }
+}
+
+.sponsors {
+  background-color: #8889f0;
+  .sponsor {
+    min-height: 140px;
+    max-width: 260px;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
