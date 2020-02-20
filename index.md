@@ -56,8 +56,9 @@ sponsors:
 
 </div>
 
-<div class="splash-container">
+<div class="homepage splash-container">
     <div class="splash">
+        <div class="logo"></div>
         <h1>HER CODE CAMP</h1>
         <h2>
             a free computer science weekend camp for senior high school students in the greater toronto area who identify as a woman, non-binary, or transgender
@@ -164,7 +165,9 @@ sponsors:
     </div>
 
     <div class="l-box-lrg panel-people">
-        <h1>Campfire // Previous Panel + Presentations (2019)</h1>
+        <div class="is-center">
+            <h1>Campfire // Previous Panel + Presentations (2019)</h1>
+        </div>
         <div class="pure-g">
             {% for person in page.people %}
             <div class="person pure-u-1 pure-u-md-1-2">
@@ -182,7 +185,7 @@ sponsors:
 
     <div class="who-are-we pure-g">
         <div class="group-photo pure-u-1 pure-u-md-1-2"></div>
-        <div class="pure-u-1 pure-u-md-1-2">
+        <div class="desc pure-u-1 pure-u-md-1-2">
             <h1>FIRE STARTERS // WHO ARE WE?</h1>
             <p>We are a group of fierce, female-identifying graduate students at the University of Toronto. Our fields vary from machine learning to bioinformatics to cybersecurity. Our goal is to hack the gender gap and help minority groups grow to their full potential.</p>
             <p>Team (from top left to bottom right): Marta Skreta, Heather Gibling, Mariana D'Angelo, Yasaman Rohanifar, Seung-Eun Yi, Joanna Pineda, Brenna Li, Chantal Shaib, Armande Ang Houle, Elyssa Bader</p>
