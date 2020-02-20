@@ -1,3 +1,7 @@
 _site
 .sass-cache
 .jekyll-metadata
+
+*.zip
+*.JPG
+.DS_Store

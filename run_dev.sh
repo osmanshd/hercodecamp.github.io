@@ -1,3 +1,4 @@
 #!/bin/bash
-export JEKYLL_VERSION=3.8
-docker run --rm --name hccblog --volume="$PWD:/srv/jekyll" -p 4000:4000 -it jekyll/jekyll:$JEKYLL_VERSION jekyll serve --watch --drafts
+set -e
+docker build -t hcc/blog .
+docker run --rm --name hccblog --volume="$PWD:/srv/jekyll" -p 4000:4000 -it hcc/blog:latest jekyll serve --watch --drafts
