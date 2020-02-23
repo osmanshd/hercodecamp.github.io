@@ -1,45 +1,5 @@
 ---
 layout: base
-people:
-  - name: Dr. Fanny Chevalier
-    bio: Empowering People with Human-Computer Interaction Research
-    img: https://d24wuq6o951i2g.cloudfront.net/img/events/id/325/3255005/assets/d9c.Fanny_Chevalier2.jpg
-  - name: Dr. Marzyeh Ghassemi
-    bio: completed her PhD at MIT where her research focused on machine learning in health care, exploring how to predict immediate and long-term patient needs to inform decisions in the intensive care unit and ambulatory care.
-    img: /assets/img/people/6f2.marzyeh_ghassemi.png
-  - name: Dr. Sheila McIlraith
-    bio: Is a Professor in the Department of Computer Science, University of Toronto. Her area of research is Artificial Intelligence.
-    img: https://d24wuq6o951i2g.cloudfront.net/img/events/id/325/3255005/assets/56c.sheila_mcillraith.jpg
-  - name: Alba Nanushi
-    bio: joins us from TD Bank where she manages the Revenue Optimization Strategy for TD's Canadian Credit Cards.
-    img: /assets/img/people/c9d.AlbaNanushiPhoto1.png
-  - name: Ania Halliop
-    bio: Director of Engineering at FreshBooks where she leads data engineering and software development teams.
-    img: /assets/img/people/92d.Ania.jpeg
-  - name: Saba Zuberi
-    bio: Is a Machine Learning Scientist at Layer6.
-    img: /assets/img/people/saba_zuberi.png
-  - name: Serena McDonnell
-    bio: Serena is a cyclist, soccer player, animal lover, and Senior Data Scientist at Delphia.
-    img: /assets/img/people/27e.serena-mcdonnel.jpeg
-  - name: Karina Sidhu
-    bio: Director for channels & digital technology @ BMO
-    img: https://d24wuq6o951i2g.cloudfront.net/img/events/id/325/3255005/assets/90b.karina-sidhu.JPG
-sponsors:
-  - name: Toronto CS
-    img: assets/img/sponsors/cs-toronto.png
-  - name: Toronto ECE
-    img: assets/img/sponsors/d92.ECE-UT-Signature-CYMK-White-_1_.png
-  - name: rotman
-    img: assets/img/sponsors/473.Rotman-TDMDAL-White.png
-  - name: Delphia
-    img: assets/img/sponsors/7b1.dephia-logo-2-Colour-Dark-BG-1-.png
-  - name: Layer6
-    img: assets/img/sponsors/ae6.Layer6-logo_white.png
-  - name: Freshbooks
-    img: assets/img/sponsors/148.freshbooks-logo-white.png
-  - name: Coding hive
-    img: assets/img/sponsors/22d.coding-hive-logo-large-with-text.png
 ---
 
 <div class="header">
@@ -240,7 +200,7 @@ sponsors:
       <h1>Campfire // Previous Panel + Presentations (2019)</h1>
     </div>
     <div class="pure-g">
-      {% for person in page.people %}
+      {% for person in site.data.people %}
       <div class="person pure-u-1 pure-u-md-1-2">
         <div class="pure-g">
           <div
@@ -296,7 +256,7 @@ sponsors:
   <div class="l-box-lrg sponsors">
     <h1>Fuel // Our Sponsors</h1>
     <div class="pure-g">
-      {% for sponsor in page.sponsors %}
+      {% for sponsor in site.data.sponsors %}
       <div class="pure-u-1 pure-u-md-1-2">
         <div
           class="sponsor"
