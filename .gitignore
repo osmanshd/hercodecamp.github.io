@@ -3,5 +3,5 @@ _site
 .jekyll-metadata
 
 *.zip
-*.JPG
+photos/*.JPG
 .DS_Store
