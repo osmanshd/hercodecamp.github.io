@@ -1,0 +1,34 @@
+day1:
+  - time: 9:30AM
+    item: Breakfast
+  - time: 10:00AM
+    item: Welcoming
+  - time: 10:30AM
+    item: Python Workshops
+  - time: 11:30AM
+    item: Experience
+  - time: 12:30PM
+    item: Lunch
+  - time: 1:30PM
+    item: Workshops
+  - time: 2:30PM
+    item: Electives
+  - time: 5:00PM
+    item: Activity
+day2:
+  - time: 9:30AM
+    item: Breakfast
+  - time: 10:00AM
+    item: Icebreakers + Intro
+  - time: 10:30AM
+    item: Python Workshops
+  - time: 11:30AM
+    item: Computer Science Games
+  - time: 12:30PM
+    item: Lunch
+  - time: 1:30PM
+    item: Python Workshops
+  - time: 2:30PM
+    item: Skill Building // Electives
+  - time: 5:00PM
+    item: Activity
