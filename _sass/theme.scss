@@ -306,9 +306,8 @@ header {
   }
 }
 
-.content {
-  max-width: 960px;
-  margin: 0 auto;
+.content-wrapper > div {
+  border-bottom: 4px solid black;
 }
 
 .pure-g [class*="pure-u"] {
@@ -356,9 +355,34 @@ header {
     .info {
       padding: 0 1em;
       .name {
-        font-weight: bold;
+        font-family: "Abril Fatface", serif;
+        font-size: 26px;
+        margin-bottom: 0.4em;
       }
     }
+  }
+}
+
+.content-wrapper {
+  h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 48px;
+    margin-top: 0;
+  }
+}
+
+.content {
+  padding: 4% 15%;
+}
+
+.eventinfo {
+  h1 {
+    text-align: left;
+  }
+  p {
+    font-size: 24px;
+    line-height: 32px;
   }
 }
 
