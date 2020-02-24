@@ -7,6 +7,10 @@
 $HCC_PURPLE: rgb(72, 87, 226);
 $HCC_YELLOW: #efeb26;
 
+$FONTMERRIWEATHER: "Merriweather", serif;
+$FONTROBOTO: "Roboto Condensed", sans-serif;
+$FONTABRIL: "Abril Fatface", serif;
+
 $linkColor: #999;
 $mobileW: 768px;
 $smallMobileW: 480px;
@@ -23,7 +27,7 @@ $lightGray: #eee;
 }
 
 body {
-  font-family: "Merriweather", sans-serif;
+  font-family: $FONTMERRIWEATHER;
   // @include fluidType(16px, 19px);
   line-height: 1.55em;
   margin: 0;
@@ -44,7 +48,7 @@ h1,
 h2,
 h3 {
   line-height: 1.2em;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $FONTROBOTO;
   font-weight: 700;
 }
 
@@ -269,12 +273,12 @@ header {
 .splash {
   h1 {
     color: white;
-    font-family: "Roboto Condensed";
+    font-family: $FONTROBOTO;
     font-weight: 700;
     font-size: 70px;
   }
   h2 {
-    font-family: Merriweather;
+    font-family: $FONTMERRIWEATHER;
     text-transform: lowercase;
     font-size: 20px;
     font-style: italic;
@@ -283,7 +287,7 @@ header {
 }
 
 .pure-menu {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $FONTROBOTO;
   font-weight: 700;
 }
 
@@ -315,17 +319,25 @@ header {
 }
 
 .schedule-row {
+  border-top: 3px solid black;
+  margin: 1em;
+  padding: 1em;
   div {
     display: inline-block;
-    &:nth-child(1) {
-      width: 100px;
-      font-weight: bold;
+    &.time {
+      font-family: $FONTABRIL;
+      width: 130px;
+      font-size: 30px;
+    }
+    &.activity {
+      font-family: $FONTROBOTO;
+      font-size: 20px;
     }
   }
 }
 
 .faq-item {
-  padding: 1em;
+  padding: 0 1em 1em 0; // right, bottom
   .q {
     font-weight: bold;
     font-size: 120%;

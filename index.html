@@ -78,16 +78,16 @@ layout: base
       <div class="pure-u-1 pure-u-md-1-2">
         {% for activity in site.data.schedule.day1 %}
         <div class="schedule-row">
-          <div>{{ activity.time }}</div>
-          <div>{{ activity.item }}</div>
+          <div class="time">{{ activity.time }}</div>
+          <div class="activity">{{ activity.item }}</div>
         </div>
         {% endfor %}
       </div>
       <div class="pure-u-1 pure-u-md-1-2">
         {% for activity in site.data.schedule.day2 %}
         <div class="schedule-row">
-          <div>{{ activity.time }}</div>
-          <div>{{ activity.item }}</div>
+          <div class="time">{{ activity.time }}</div>
+          <div class="activity">{{ activity.item }}</div>
         </div>
         {% endfor %}
       </div>
