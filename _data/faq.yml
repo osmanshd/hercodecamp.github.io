@@ -1,0 +1,16 @@
+- q: Do you provide food?
+  a: We will provide breakfast, lunch, and snacks on both days.
+- q: Does the camp provide housing accommodations?
+  a: Unfortunately, HER CODE CAMP is a day camp.
+- q: What skills do I need?
+  a: |
+    Participants should be highly motivated to learn,
+    collaborate, and have a strong background in mathematics.
+- q: What is the target age group?
+  a: |
+    We are looking for participants in grades 10-12 for the
+    2019/2020 calendar year.
+- q: Do I need programming experience?
+  a: No prior coding experience is needed.
+- q: Do I need to bring my own computer?
+  a: No, we got you covered :)
