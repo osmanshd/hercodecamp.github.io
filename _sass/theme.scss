@@ -35,14 +35,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  color: $linkColor;
-  text-decoration: none;
-  transition: border-bottom 0.4s;
-  &:hover {
-    border-bottom: 0.5px solid $linkColor;
-  }
-}
+// a {
+//   color: $linkColor;
+//   text-decoration: none;
+//   transition: border-bottom 0.4s;
+//   &:hover {
+//     border-bottom: 0.5px solid $linkColor;
+//   }
+// }
 
 h1,
 h2,
@@ -431,6 +431,7 @@ a.button,
 a.btn {
   display: inline-block;
   background-color: black;
+  text-decoration: none;
   color: white;
   padding: 12px;
   margin: 1em 0;
