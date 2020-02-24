@@ -389,6 +389,7 @@ header {
 }
 
 .eventinfo {
+  border-top: 4px solid black;
   h1 {
     text-align: left;
   }
@@ -408,6 +409,42 @@ header {
   }
   .desc {
     padding: 2em;
+  }
+}
+
+a.button,
+a.btn {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  padding: 12px;
+  margin: 1em 0;
+  text-transform: lowercase;
+  font-style: italic;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 3px;
+  &:hover {
+    background-color: white;
+    color: black;
+  }
+}
+
+.volunteer {
+  .desc {
+    .msg {
+      text-align: left;
+    }
+    padding: 10%;
+  }
+  .photo {
+    background-image: url("/assets/img/people/volunteer-photo.JPG");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 600px;
   }
 }
 
