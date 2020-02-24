@@ -72,10 +72,11 @@ layout: base
     </p>
   </div>
 
-  <div class="content">
+  <div class="content schedule">
     <h1>Tentative Schedule 2020</h1>
     <div class="pure-g">
       <div class="pure-u-1 pure-u-md-1-2">
+        <h2>Day 1</h2>
         {% for activity in site.data.schedule.day1 %}
         <div class="schedule-row">
           <div class="time">{{ activity.time }}</div>
@@ -84,6 +85,7 @@ layout: base
         {% endfor %}
       </div>
       <div class="pure-u-1 pure-u-md-1-2">
+        <h2>Day 2</h2>
         {% for activity in site.data.schedule.day2 %}
         <div class="schedule-row">
           <div class="time">{{ activity.time }}</div>
@@ -106,7 +108,7 @@ layout: base
     </div>
   </div>
 
-  <div class="content">
+  <div class="content im-interested">
     <h1>I AM INTERESTED, WHAT NOW?</h1>
     <p>Applications are now open for May 2020!</p>
     <a class="button" href="https://forms.gle/kXjM6roY7onk6K3j7">APPLY HERE!</a>
