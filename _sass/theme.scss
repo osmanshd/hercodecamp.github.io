@@ -615,3 +615,19 @@ a.cta {
     }
   }
 }
+
+.hero-video {
+  .why {
+    padding: 5%;
+  }
+  .video {
+    text-align: right;
+    padding: 10px;
+  }
+  .msg {
+    font-family: $FONTMERRIWEATHER;
+    font-size: 130%;
+    font-weight: bold;
+    font-style: italic;
+  }
+}
