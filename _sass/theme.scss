@@ -589,3 +589,29 @@ a.cta {
   margin-top: 8em;
   border-top: 3px solid black;
 }
+
+.hero-imgs {
+  .img {
+    height: 320px;
+    @media screen and (min-width: 35.5em) {
+      height: 350px; // full column
+    }
+    @media screen and (min-width: 48em) {
+      height: 200px;
+    }
+    @media screen and (min-width: 64em) {
+      height: 350px;
+    }
+    background-size: cover;
+    background-position: center;
+    &.img1 {
+      background-image: url("https://d24wuq6o951i2g.cloudfront.net/img/events/id/325/3255005/assets/a5b.2019-09-14-020-HerCodeCamp_JT.JPG");
+    }
+    &.img2 {
+      background-image: url("https://d24wuq6o951i2g.cloudfront.net/img/events/id/325/3255005/assets/838.2019-09-14-274-HerCodeCamp_JT.JPG");
+    }
+    &.img3 {
+      background-image: url("https://d24wuq6o951i2g.cloudfront.net/img/events/id/325/3255005/assets/1ef.2019-09-14-185-HerCodeCamp_JT.JPG");
+    }
+  }
+}
