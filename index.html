@@ -1,5 +1,6 @@
 ---
 layout: base
+application_url: https://forms.gle/eL3f4yytyTmdeEKM6
 ---
 
 <div class="header">
@@ -33,11 +34,16 @@ layout: base
       transgender
     </h2>
     <div>
-      MAY 2020 REGISTRATION OPEN NOW
+      <a href="{{ page.application_url }}" class="cta">
+        CLICK HERE FOR <br />
+        MAY 2020 APPLICATIONS <br />
+        DUE MARCH 27th
+      </a>
     </div>
     <div>
       IN PARTNERSHIP WITH:<br />
-      THE UNIVERSITY OF TORONTO'S DCS WOMEN
+      THE UNIVERSITY OF TORONTO'S DCS WOMEN<br />
+      <p class="chevron-down">⌄</p>
     </div>
   </div>
 </div>
@@ -110,8 +116,14 @@ layout: base
 
   <div class="content im-interested">
     <h1>I AM INTERESTED, WHAT NOW?</h1>
-    <p>Applications are now open for May 2020!</p>
-    <a class="button" href="https://forms.gle/kXjM6roY7onk6K3j7">APPLY HERE!</a>
+    <p>
+      Applications are now open for May 2020!<br />
+      <span class="hl">Due March 27th</span>
+    </p>
+
+    <a href="{{ page.application_url }}" class="cta">
+      APPLY HERE!
+    </a>
   </div>
 
   <div class="l-box-lrg panel-people">
