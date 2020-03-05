@@ -14,18 +14,20 @@
 </div>
 
 <style>
-  #nav {
-    transition: opacity 0.2s ease-in-out;
-    opacity: 1;
+  #nav .home-menu {
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    background: #4d56ee;
   }
-  #nav.invisible {
-    opacity: 0;
+  #nav.invisible .home-menu {
+    box-shadow: none;
+    background: rgba(0, 0, 0, 0);
   }
 </style>
 <script>
   let navbar = document.getElementById("nav");
   let invisible = true;
-  let threshold = 100; // pixels from top until show navbar
+  let threshold = 80; // pixels from top until show navbar
 
   let isTicking;
   const debounce = (callback, evt) => {
