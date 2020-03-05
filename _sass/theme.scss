@@ -535,3 +535,13 @@ a.cta {
     color: #ddd;
   }
 }
+
+.blog-footer {
+  color: #aaa;
+  a {
+    color: inherit;
+  }
+  padding: 3em 0;
+  margin-top: 8em;
+  border-top: 3px solid black;
+}
