@@ -1,8 +1,53 @@
-<div class="navbar">
-  <ul>
-    <a href="/"><li>Home</li></a>
-    <a href="/about"><li>About</li></a>
-    <a href="/blog"><li>Blog</li></a>
-    <a href="/photos"><li>Photos</li></a>
-  </ul>
+<div id="nav" class="header invisible">
+  <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+    <a class="pure-menu-heading" href="">HER CODE CAMP</a>
+
+    <ul class="pure-menu-list">
+      <li class="pure-menu-item pure-menu-selected">
+        <a href="/" class="pure-menu-link">Home</a>
+      </li>
+      <li class="pure-menu-item">
+        <a href="/blog" class="pure-menu-link">Blog</a>
+      </li>
+    </ul>
+  </div>
 </div>
+
+<style>
+  #nav {
+    transition: opacity 0.2s ease-in-out;
+    opacity: 1;
+  }
+  #nav.invisible {
+    opacity: 0;
+  }
+</style>
+<script>
+  let navbar = document.getElementById("nav");
+  let invisible = true;
+  let threshold = 100; // pixels from top until show navbar
+
+  let isTicking;
+  const debounce = (callback, evt) => {
+    if (isTicking) return;
+    requestAnimationFrame(() => {
+      callback(evt);
+      isTicking = false;
+    });
+    isTicking = true;
+  };
+  const handleScroll = evt => {
+    // show navbar if beyond the threshold
+    if (invisible && window.scrollY > threshold) {
+      navbar.classList.remove("invisible");
+      invisible = false;
+    }
+
+    // hide navbar if before the threshold
+    if (!invisible && window.scrollY <= threshold) {
+      navbar.classList.add("invisible");
+      invisible = true;
+    }
+  };
+  document.defaultView.onscroll = evt => debounce(handleScroll, evt);
+</script>
