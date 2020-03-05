@@ -2,24 +2,3 @@
 ---
 
 @import "theme";
-
-.texture-purple {
-  background-image: url("{{ site.baseurl }}/assets/textures/purple.jpg");
-}
-.texture-purple {
-  h2 {
-    color: #ccc;
-  }
-
-  .social i {
-    color: #ddd;
-
-    &:hover {
-      color: lighten(#ddd, 7%);
-    }
-  }
-
-  .post-date {
-    color: #ddd;
-  }
-}

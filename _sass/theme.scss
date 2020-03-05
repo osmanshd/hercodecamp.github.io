@@ -513,3 +513,25 @@ a.cta {
     color: inherit;
   }
 }
+
+.blog-header {
+  background-image: url("/assets/img/hercodecamp_blogheader_bg.png");
+  background-size: cover;
+  background-position: center;
+  background-color: $HCC_PURPLE;
+  h2 {
+    color: #ccc;
+  }
+
+  .social i {
+    color: #ddd;
+
+    &:hover {
+      color: lighten(#ddd, 7%);
+    }
+  }
+
+  .post-date {
+    color: #ddd;
+  }
+}

@@ -29,14 +29,6 @@ plugins:
   - jekyll-feed
   - jekyll-gallery-generator
 
-# Texture theme settings
-texture:
-  title: HER CODE CAMP
-  style: purple
-  tagline: a free computer science weekend camp for senior high school students
-    in the greater Toronto area who identify as a woman, non-binary, or transgender
-  date_format: "%b %-d, %Y"
-
 gallery:
   dir: photos # Path to the gallery
   symlink: false # false: copy images into _site. true: create symbolic links (saves disk space)
