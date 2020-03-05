@@ -259,6 +259,9 @@ header {
   /* absolute center .splash within .splash-container */
   width: 80%;
   margin: 20% auto;
+  @media screen and (min-width: 64em) {
+    margin: 10% auto;
+  }
   position: absolute;
   top: 0px;
   left: 0;
@@ -273,7 +276,6 @@ header {
     font-weight: 700;
 
     font-size: 270%;
-
     @media screen and (min-width: 35.5em) {
       font-size: 270%;
     }
