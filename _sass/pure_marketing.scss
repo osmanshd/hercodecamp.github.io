@@ -128,19 +128,6 @@ $splash-height: 100%;
   position: fixed !important;
 }
 
-.splash {
-  /* absolute center .splash within .splash-container */
-  width: 80%;
-  margin: 10em auto;
-  position: absolute;
-  top: 0px;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  text-align: center;
-  text-transform: uppercase;
-}
-
 /* This is the main heading that appears on the blue section */
 .splash-head {
   font-size: 20px;
