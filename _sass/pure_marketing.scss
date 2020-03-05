@@ -1,3 +1,5 @@
+@import "variables";
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -202,14 +204,6 @@ $splash-height: 100%;
 .ribbon {
   background: #2d3e50;
   color: #aaa;
-}
-
-/* This is the class used for the footer */
-.footer {
-  background: #111;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 }
 
 /*
