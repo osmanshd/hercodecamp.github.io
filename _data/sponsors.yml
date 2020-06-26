@@ -1,14 +1,16 @@
 - name: Toronto CS
   img: assets/img/sponsors/cs-toronto.png
-- name: Toronto ECE
-  img: assets/img/sponsors/d92.ECE-UT-Signature-CYMK-White-_1_.png
-- name: rotman
-  img: assets/img/sponsors/473.Rotman-TDMDAL-White.png
-- name: Delphia
-  img: assets/img/sponsors/7b1.dephia-logo-2-Colour-Dark-BG-1-.png
 - name: Layer6
   img: assets/img/sponsors/ae6.Layer6-logo_white.png
+- name: Toronto ECE
+  img: assets/img/sponsors/d92.ECE-UT-Signature-CYMK-White-_1_.png
 - name: Freshbooks
   img: assets/img/sponsors/148.freshbooks-logo-white.png
+- name: Delphia
+  img: assets/img/sponsors/7b1.dephia-logo-2-Colour-Dark-BG-1-.png
+- name: Rotman
+  img: assets/img/sponsors/473.Rotman-TDMDAL-White.png
 - name: Coding hive
   img: assets/img/sponsors/22d.coding-hive-logo-large-with-text.png
+- name: OICR
+  img: assets/img/sponsors/oicr.png
