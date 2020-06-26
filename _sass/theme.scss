@@ -222,13 +222,19 @@ header {
   }
 }
 
+#nav .home-menu {
+  & .pure-menu-item > a.pure-menu-link {
+    color: white;
+  }
+  & .pure-menu-item:not(.pure-menu-selected) > a.pure-menu-link {
+    text-decoration: underline;
+  }
+}
+
 .navbar {
   position: absolute;
   top: 0;
   right: 5vw;
-  a {
-    color: inherit;
-  }
   ul {
     list-style-type: none;
     li {
@@ -254,6 +260,12 @@ header {
 //
 // HCC styles
 //
+
+.splash-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba($HCC_DARKPURPLE, 35%);
+}
 
 .splash {
   /* absolute center .splash within .splash-container */
@@ -303,10 +315,11 @@ header {
 }
 
 .homepage.splash-container {
-  background-color: $HCC_PURPLE;
+  background-color: $HCC_DARKPURPLE;
   color: white;
-  background-image: url("/assets/img/hercodecamp_bg.png");
+  background-image: url("/assets/img/illustration-bg.png");
   background-size: cover;
+  background-position: 50%;
   font-family: "Roboto Condensed", sans-serif !important;
   font-weight: 700;
 
