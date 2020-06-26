@@ -498,9 +498,10 @@ a.cta {
   font-size: 120%;
   border: 1px solid black;
   border-radius: 3px;
-  &:hover {
+  &:not(.disabled):hover {
     background-color: white;
     color: black;
+    cursor: pointer;
   }
 }
 
