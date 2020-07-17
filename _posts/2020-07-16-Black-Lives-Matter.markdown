@@ -12,5 +12,5 @@ HER CODE CAMP aims to empower under-represented communities in technology to cre
 
 We have a long way to go, and we as an organization are committed to making the changes necessary to continually do our part. We encourage any feedback to our actions, and are always open to hearing about other ways we can show up for the BLM movement. We are listening and learning.
 
-![innovation](/assets/4.png)
+![image](/assets/img/4.png)
 
