@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link, PageProps } from "gatsby"
-import Logo from "../assets/hcc-white-logo-white-name-edited.inline.svg"
+import Logo from "../assets/logo-mark.inline.svg"
 import Layout from "../components/layout"
 import { StaticImage } from "gatsby-plugin-image"
 import Marquee from "react-easy-marquee"
@@ -16,15 +16,15 @@ const IndexPage: React.FunctionComponent<PageProps> = () => (
   <Layout>
     {/* Might need a minimum height. */}
     <Helmet title="HER CODE CAMP" />
-    <section className="h-screen bg-gradient-to-r from-darkIris to-iris relative">
+    <section className="min-h-screen bg-gradient-to-r from-darkIris to-iris relative px-8">
       <div className="max-w-7xl mx-auto">
         <nav className="pt-8 text-right w-full">
-          <ul className="text-gray-300 uppercase flex gap-4 justify-end align-middle whitespace-nowrap">
-            <li>
-              <Link to="/">
+          <ul className="text-gray-300 uppercase flex gap-4 justify-end align-middle whitespace-nowrap items-center">
+            <li className="flex-1 text-left">
+              <Link className="group relative" to="/">
                 {/* TODO: add a fun glow effect to this one. */}
-                <Logo className="text-left h-12" />
-                <span className="uppercase font-black text-xl text-white hover:text-icterine">
+                <Logo className="text-left h-8 group-hover:text-icterine text-white inline-block mt-[-5px]" />
+                <span className="ml-2 uppercase font-black text-xl text-white group-hover:text-icterine">
                   HER CODE CAMP
                 </span>
               </Link>
@@ -51,12 +51,12 @@ const IndexPage: React.FunctionComponent<PageProps> = () => (
         </nav>
       </div>
       <div className="max-w-7xl mx-auto">
-        <div className="z-10 relative">
-          <h1 className="text-white text-7xl uppercase font-bold mt-32 mb-2">
+        <div className="z-10 relative md:mb-0 mb-4">
+          <h1 className="text-white text-7xl uppercase font-bold mt-8 md:mt-32 mb-2">
             Ready to hack the future?
           </h1>
           <p className="text-xl text-white mb-4 font-extralight font-body">
-            Join a free computer scienc community for high school women and
+            Join a free computer science community for high school women and
             non-binary students in the Greater Toronto Area.
           </p>
           <Link to="/register">
@@ -71,7 +71,7 @@ const IndexPage: React.FunctionComponent<PageProps> = () => (
           </Link>
         </div>
         {/* TODO: I should add a fun glowing animation to this background it could look cool. */}
-        <div className="bottom-0 right-32 absolute w-[75%] z-0">
+        <div className="text-center md:bottom-0 md:right-32 md:absolute md:w-[75%] z-0">
           {/* TODO: Image is loaded with a weird background thing. */}
           <StaticImage
             src="../assets/Code_Camp_Wide.png"
@@ -81,8 +81,8 @@ const IndexPage: React.FunctionComponent<PageProps> = () => (
       </div>
     </section>
     <section>
-      <div className="max-w-7xl mx-auto px-14 py-40 grid-cols-2 grid gap-20 content-center">
-        <div>
+      <div className="max-w-7xl mx-auto px-8 md:px-14 py-10 md:py-40 grid-cols-2 md:grid gap-20 content-center">
+        <div className="mb-6 md:mb-0">
           <StaticImage
             className="shadow-icterine"
             src="../assets/participant-volunteer-smiling.jpg"
@@ -108,8 +108,8 @@ const IndexPage: React.FunctionComponent<PageProps> = () => (
         </div>
       </div>
     </section>
-    <section className="bg-icterine py-12">
-      <div className="max-w-7xl mx-auto flex gap-28 px-20 py-40">
+    <section className="bg-icterine md:py-40 py-20">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-28 px-20 ">
         <div className="text-center">
           <p className="text-6xl mb-8">💻</p>
           {/* <StaticImage alt="Emoji style image of a laptop." /> */}
@@ -138,8 +138,8 @@ const IndexPage: React.FunctionComponent<PageProps> = () => (
       </div>
     </section>
     {/* TODO: I just went with dark grey. */}
-    <section className="bg-gray-800">
-      <div className="grid grid-cols-3 max-w-7xl mx-auto items-center gap-12 py-32">
+    <section className="bg-gray-800 px-6 md:px-12">
+      <div className="grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto items-center gap-16 md:gap-12 py-32">
         {[
           {
             testimonial: `My daughter had an excellent experience at HER CODE CAMP. The
@@ -162,10 +162,10 @@ const IndexPage: React.FunctionComponent<PageProps> = () => (
           },
         ].map(({ testimonial, name, title }) => (
           <div>
-            <span className="ml-[-11px] font-body italic font-black text-icterine text-9xl align-bottom">
+            <span className="ml-[-11px] font-body italic font-black text-icterine text-9xl align-bottom select-none">
               “
             </span>
-            <p className="mt-[-20px] font-mono font-extralight text-white text-lg mb-4">
+            <p className="sm:mt[-30px] mt-[-20px] font-mono font-extralight text-white text-lg mb-4">
               {testimonial}
             </p>
             {/* TODO: need to match font colours */}
@@ -180,18 +180,22 @@ const IndexPage: React.FunctionComponent<PageProps> = () => (
         ))}
       </div>
     </section>
-    <section className="h-screen bg-gray-300">
-      <div className="max-w-7xl mx-auto">
-        <StaticImage alt="Group photo of HER CODE CAMP participants and volunteers." />
+    <section>
+      {/* TODO: need a max width here */}
+      <div className="mx-auto ">
+        <StaticImage
+          src="../assets/all-participants.jpg"
+          alt="Group photo of HER CODE CAMP participants and volunteers."
+        />
       </div>
     </section>
-    <section>
-      <div className="max-w-5xl mx-auto py-12">
-        <h2 className="mb-8 font-bold text-4xl text-body text-center">
+    <section className="bg-icterine">
+      <div className="max-w-5xl mx-auto py-24 md:px-12 px-8">
+        <h2 className="mb-8 font-bold font-body text-4xl text-body text-center">
           Are you in?
         </h2>
-        <div className="grid grid-cols-2 gap-20">
-          <div className="shadow-xl rounded px-10 pt-20 pb-12 text-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-20 gap-8">
+          <div className="shadow-xl bg-white rounded px-10 pt-20 pb-12 text-center">
             {/* <StaticImage alt="Emoji style image of woman using computer." /> */}
             <p className="text-9xl mb-8">👩🏽‍💻</p>
             <h3 className="uppercase font-bold mb-4 text-xl">Learn</h3>
@@ -205,11 +209,11 @@ const IndexPage: React.FunctionComponent<PageProps> = () => (
               </button>
             </Link>
           </div>
-          <div className="shadow-lg rounded px-10 pt-20 pb-12 text-center font-body">
+          <div className="shadow-lg rounded bg-white px-10 pt-20 pb-12 text-center font-body">
             {/* <StaticImage alt="Emoji style image of woman using computer." /> */}
             <p className="text-9xl mb-8">🤗</p>
             <h3 className="uppercase font-body font-bold text-xl mb-4">
-              Learn
+              Contribute
             </h3>
             <p className="font-body font-light text-xl mb-8">
               Join the team as a volunteer, staff, partner, or board member.
@@ -230,7 +234,7 @@ const IndexPage: React.FunctionComponent<PageProps> = () => (
           "radial-gradient(circle at 100% 100%, rgba(240,234,80,1) 0%, rgba(72,87,226,1) 50%)",
       }}
     >
-      <div className="w-2/5 bg-opacity-75 bg-white rounded px-16 py-20">
+      <div className="md:w-2/5 md:bg-opacity-75 md:bg-white md:rounded md:px-16 md:py-20 px-4 md:text-black text-gray-200">
         {/* <div className="h-1/3 w-1/3 bg-opacity-75 bg-white rounded-b-lg border border-gray-500 relative py-20"> */}
 
         {/* <div className="top-0 left-0 absolute font-bold text-lg">X</div> */}
@@ -246,7 +250,7 @@ const IndexPage: React.FunctionComponent<PageProps> = () => (
           </p>
           {/* TODO: */}
           <Link to="/subscribe">
-            <button className="px-5 py-2 uppercase font-mono font-bold bg-icterine  hover:bg-iris hover:text-white">
+            <button className="px-5 py-2 uppercase font-mono font-bold bg-icterine  hover:bg-iris hover:text-white text-black">
               Subscribe
             </button>
           </Link>
@@ -254,15 +258,103 @@ const IndexPage: React.FunctionComponent<PageProps> = () => (
       </div>
     </section>
     <section className="bg-gray-800 py-14">
-      <h2 className="text-center text-white text-5xl font-body">Sponsors</h2>
+      <h2 className="text-center text-white text-4xl font-body mb-4">
+        Sponsors
+      </h2>
+      <div className="flex flex-wrap md:px-0 px-8 justify-center items-center mb-12 mt-8 gap-8">
+        <a
+          href="https://www.thecodinghive.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <StaticImage
+            height={75}
+            alt="Coding Hive"
+            src="../assets/sponsor-coding-hive.png"
+          />
+        </a>
+
+        <a
+          href="https://delphia.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <StaticImage
+            height={50}
+            alt="Delphia"
+            src="../assets/sponsor-delphia.png"
+          />
+        </a>
+
+        <a href="https://oicr.on.ca/" target="_blank" rel="noopener noreferrer">
+          <StaticImage
+            height={75}
+            alt="Ontario Insitute for Cancer Research"
+            src="../assets/sponsor-oicr.png"
+          />
+        </a>
+        <a
+          href="https://www.rotman.utoronto.ca/FacultyAndResearch/EducationCentres/TDMDAL"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <StaticImage
+            height={75}
+            alt="TD Rotman"
+            src="../assets/sponsor-td-rotman.png"
+          />
+        </a>
+        <a
+          href="https://www.utoronto.ca/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <StaticImage
+            height={75}
+            alt="University of Toronto"
+            src="../assets/sponsor-uoft.png"
+          />
+        </a>
+      </div>
       {/* @ts-ignore */}
-      <Marquee pauseOnHover duration={20000}>
-        <div className="w-20 h-10 font-bold text-white">Hello</div>
-        <div className="w-20 h-10 font-bold text-white">World</div>
-        <div className="w-20 h-20 font-bold text-white">Foo</div>
-        <div className="w-20 h-10 font-bold text-white">Bar</div>
-        <div className="w-40 h-10 font-bold text-white">HER CODE CAMP</div>
+      <Marquee pauseOnHover duration={20000} height={125}>
+        <div className="mx-6">
+          <StaticImage
+            height={75}
+            alt="Coding Hive"
+            src="../assets/sponsor-coding-hive.png"
+          />
+        </div>
+        <div className="mx-6">
+          <StaticImage
+            height={75}
+            alt="Delphia"
+            src="../assets/sponsor-delphia.png"
+          />
+        </div>
+        <div className="mx-6">
+          <StaticImage
+            height={75}
+            alt="Ontario Insitute for Cancer Research"
+            src="../assets/sponsor-oicr.png"
+          />
+        </div>
+        <div className="mx-6">
+          <StaticImage
+            height={75}
+            alt="TD Rotman"
+            src="../assets/sponsor-td-rotman.png"
+          />
+        </div>
+        <div className="mx-6">
+          <StaticImage
+            height={75}
+            alt="University of Toronto"
+            src="../assets/sponsor-uoft.png"
+          />
+        </div>
       </Marquee>
+
       <div className="flex content-middle justify-center h-10 text-gray-400 gap-3 mb-4">
         <a
           href="https://www.youtube.com/channel/UCa_Ck4Sdsq2QB21djQuFeCw"

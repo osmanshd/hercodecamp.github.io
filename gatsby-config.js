@@ -25,9 +25,13 @@ module.exports = {
         },
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: "src/assets/favicon.svg",
+      },
+    },
+
     //     name: `gatsby-starter-default`,
     //     short_name: `starter`,
     //     start_url: `/`,
