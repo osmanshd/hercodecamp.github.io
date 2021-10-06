@@ -5,6 +5,21 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      keyframes: {
+        fadeUp: {
+          "0%": {
+            opacity: "0",
+            transform: "translate3d(0, 50%, 0)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translate3d(0, 0, 0)",
+          },
+        },
+      },
+      animation: {
+        fadeUp: "fadeUp 0.5s ease 0.5s 1 normal forwards",
+      },
       colors: {
         iris: "#4857E2",
         darkIris: "#222e7a",

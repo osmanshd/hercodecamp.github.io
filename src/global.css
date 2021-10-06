@@ -13,4 +13,17 @@
   a:hover {
     @apply text-icterine;
   }
+  .animate-text-in p,
+  .animate-text-in h1,
+  .animate-text-in h2,
+  .animate-text-in h3,
+  .animate-text-in h4,
+  .animate-text-in h5,
+  .animate-text-in span,
+  .animate-text-in button,
+  .animate-text-in img,
+  .animate-text-in li,
+  .animate-text-in picture {
+    @apply animate-fadeUp opacity-0;
+  }
 }

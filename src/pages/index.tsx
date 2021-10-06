@@ -12,13 +12,18 @@ import {
   Youtube,
 } from "@styled-icons/boxicons-logos"
 
+// Because the buttons are buttons they tab twice :(. I shoulda made them inline-blocks lollllll
+
 const IndexPage: React.FunctionComponent<PageProps> = () => (
   <Layout>
     {/* Might need a minimum height. */}
     <Helmet title="HER CODE CAMP" />
-    <section className="min-h-screen bg-gradient-to-r from-darkIris to-iris relative px-8">
-      <div className="max-w-7xl mx-auto">
-        <nav className="pt-8 text-right w-full">
+    <section
+      className="min-h-screen md:h-1
+     bg-gradient-to-r from-darkIris to-iris relative animate-text-in"
+    >
+      <div className="px-8 max-w-7xl mx-auto md:flex flex-col md:h-full pb-12">
+        <nav className="hidden md:block pt-8 text-right w-full">
           <ul className="text-gray-300 uppercase flex gap-4 justify-end align-middle whitespace-nowrap items-center">
             <li className="flex-1 text-left">
               <Link className="group relative" to="/">
@@ -49,32 +54,37 @@ const IndexPage: React.FunctionComponent<PageProps> = () => (
             </li>
           </ul>
         </nav>
-      </div>
-      <div className="max-w-7xl mx-auto">
-        <div className="z-10 relative md:mb-0 mb-4">
-          <h1 className="text-white text-7xl uppercase font-bold mt-8 md:mt-32 mb-2">
-            Ready to hack the future?
-          </h1>
-          <p className="text-xl text-white mb-4 font-extralight font-body">
-            Join a free computer science community for high school women and
-            non-binary students in the Greater Toronto Area.
-          </p>
-          <Link to="/register">
-            <button className="px-5 py-2 uppercase font-mono font-bold bg-icterine  border-icterine border hover:bg-transparent hover:text-white mr-4">
-              Register
-            </button>
-          </Link>
-          <Link to="/volunteer">
-            <button className="px-5 py-2 uppercase font-mono font-bold bg-icterine  border-icterine border hover:bg-transparent hover:text-white">
-              Volunteer
-            </button>
-          </Link>
-        </div>
-        {/* TODO: I should add a fun glowing animation to this background it could look cool. */}
-        <div className="text-center md:bottom-0 md:right-32 md:absolute md:w-[75%] z-0">
+        <div
+          style={{
+            gridTemplateColumns: "2fr 1fr",
+          }}
+          className="flex-1 md:grid grid-cols-1 md:grid-cols-2 md:gap-0 gap-8 md:mb-0 mb-4 pt-8 md:mt-32 h-full"
+        >
+          <div className="mb-12 md:mb-0">
+            <h1 className="text-white text-7xl uppercase font-bold mb-2">
+              Ready to hack the future?
+            </h1>
+            <p className="text-xl text-white mb-4 font-extralight font-body">
+              Join a free computer science community for high school women and
+              non-binary students in the Greater Toronto Area.
+            </p>
+            <Link to="/register">
+              <button className="px-5 py-2 uppercase font-mono font-bold bg-icterine  border-icterine border hover:bg-transparent hover:text-white mr-4">
+                Register
+              </button>
+            </Link>
+            <Link to="/get-involved">
+              <button className="px-5 py-2 uppercase font-mono font-bold bg-icterine  border-icterine border hover:bg-transparent hover:text-white">
+                Get Involved
+              </button>
+            </Link>
+          </div>
+          {/* TODO: I should add a fun glowing animation to this background it could look cool. */}
           {/* TODO: Image is loaded with a weird background thing. */}
           <StaticImage
-            src="../assets/Code_Camp_Wide.png"
+            src="../assets/code-camp-art.png"
+            className="w-full p-8 self-end"
+            imgStyle={{ objectFit: "contain" }}
             alt="Illustration of camp participants sitting around a fire where the logs are made using code tags."
           />
         </div>
@@ -161,7 +171,7 @@ const IndexPage: React.FunctionComponent<PageProps> = () => (
             title: "HCC Alumni 2021",
           },
         ].map(({ testimonial, name, title }) => (
-          <div>
+          <div key={name}>
             <span className="ml-[-11px] font-body italic font-black text-icterine text-9xl align-bottom select-none">
               “
             </span>
@@ -220,7 +230,7 @@ const IndexPage: React.FunctionComponent<PageProps> = () => (
             </p>
             <Link to="/subscribe">
               <button className="px-5 py-2 uppercase font-mono font-bold bg-icterine  hover:bg-iris hover:text-white">
-                Volunteer
+                Get Involved
               </button>
             </Link>
           </div>
