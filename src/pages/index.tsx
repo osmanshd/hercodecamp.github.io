@@ -220,7 +220,7 @@ const IndexPage: React.FunctionComponent<PageProps> = () => (
           <h2 className="font-mono text-3xl font-bold mb-2">
             print("HELLO WORLD")
           </h2>
-          <p className="font-body mb-4">
+          <p className="font-body mb-4 text-lg">
             HER CODE CAMP is a non-profit organization that empowers
             under-represented communities in technology. We host free programs
             specifically targeted to high school students who identify as a
