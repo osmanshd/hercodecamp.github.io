@@ -90,6 +90,123 @@ const IndexPage: React.FunctionComponent<PageProps> = () => (
         </div>
       </div>
     </section>
+    <section
+      style={{
+        backgroundImage:
+          "radial-gradient(circle at 50% 50%, rgba(240,234,80,1) 0%, #FFFFFF 100%)",
+      }}
+    >
+      <div className="mx-auto px-20 pt-20 pb-32">
+        <h2 className="font-mono text-4xl text-center font-medium mb-2">
+          Come <i>*program*</i> with us!
+        </h2>
+        <p className="text-center font-light mb-10">
+          Our programs are designed for begginners with little to no programming
+          experience. Oh and they're free!
+        </p>
+        <div className="flex gap-10 justify-center">
+          <div className="rounded-lg shadow-2xl bg-gray-800 pt-3 px-4">
+            <div className="flex gap-1">
+              <div className="rounded-full w-4 h-4 font-mono bg-red-500">
+                {/* x */}
+              </div>
+              <div className="rounded-full w-4 h-4 font-mono bg-yellow-500">
+                {/* - */}
+              </div>
+              <Link to="/apply">
+                <div className="rounded-full w-4 h-4 font-mono bg-green-500">
+                  {/* [] */}
+                </div>
+              </Link>
+            </div>
+            <div className="py-5 my-2">
+              <h3 className=" font-mono text-xl text-icterine">
+                Mentorship Program
+              </h3>
+              <span className="text-md font-mono text-gray-50">
+                August 12-24, 2021
+              </span>
+              <p className="text-md font-mono text-gray-400 mt-2">
+                Meet weekly with a teaching assistant to put together a project
+                in 2 weeks.
+              </p>
+              <Link
+                className="mt-5 inline-block px-5 py-2 uppercase font-mono font-bold bg-icterine  hover:bg-iris hover:text-white"
+                to="/subscribe"
+              >
+                Apply
+              </Link>
+            </div>
+          </div>
+          <div className="rounded-lg shadow-2xl bg-gray-800 pt-3 px-4">
+            <div className="flex gap-1">
+              <div className="font-sm align-middle rounded-full w-4 h-4 font-mono bg-red-500">
+                {/* x */}
+              </div>
+              <div className="font-sm align-middle rounded-full w-4 h-4 font-mono bg-yellow-500">
+                {/* - */}
+              </div>
+              <Link to="/apply">
+                <div className="font-sm align-middle rounded-full w-4 h-4 font-mono bg-green-500">
+                  {/* [] */}
+                </div>
+              </Link>
+            </div>
+            <div className="py-5 my-2">
+              <h3 className=" font-mono text-xl text-icterine">
+                Mentorship Program
+              </h3>
+              <span className="text-md font-mono text-gray-50">
+                August 12-24, 2021
+              </span>
+              <p className="text-md font-mono text-gray-400 mt-2">
+                Meet weekly with a teaching assistant to put together a project
+                in 2 weeks.
+              </p>
+              <Link
+                className="mt-5 inline-block px-5 py-2 uppercase font-mono font-bold bg-icterine  hover:bg-iris hover:text-white"
+                to="/subscribe"
+              >
+                Apply
+              </Link>
+            </div>
+          </div>
+          <div className="rounded-lg shadow-2xl bg-gray-800 pt-3 px-4">
+            <div className="flex gap-1">
+              <div className="font-sm align-middle rounded-full w-4 h-4 font-mono bg-red-500">
+                {/* x */}
+              </div>
+              <div className="font-sm align-middle rounded-full w-4 h-4 font-mono bg-yellow-500">
+                {/* - */}
+              </div>
+              <Link to="/apply">
+                <div className="font-sm align-middle rounded-full w-4 h-4 font-mono bg-green-500">
+                  {/* [] */}
+                </div>
+              </Link>
+            </div>
+            <div className="py-5 my-2">
+              <h3 className=" font-mono text-xl text-icterine">
+                Mentorship Program
+              </h3>
+              <span className="text-md font-mono text-gray-50">
+                August 12-24, 2021
+              </span>
+              <p className="text-md font-mono text-gray-400 mt-2">
+                Meet weekly with a teaching assistant to put together a project
+                in 2 weeks.
+              </p>
+              <Link
+                className="mt-5 inline-block px-5 py-2 uppercase font-mono font-bold bg-icterine  hover:bg-iris hover:text-white"
+                to="/subscribe"
+              >
+                Apply
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section>
       <div className="max-w-7xl mx-auto px-8 md:px-14 py-10 md:py-40 grid-cols-2 md:grid gap-20 content-center">
         <div className="mb-6 md:mb-0">
@@ -147,6 +264,7 @@ const IndexPage: React.FunctionComponent<PageProps> = () => (
         </div>
       </div>
     </section>
+
     {/* TODO: I just went with dark grey. */}
     <section className="bg-gray-800 px-6 md:px-12">
       <div className="grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto items-center gap-16 md:gap-12 py-32">
