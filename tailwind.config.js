@@ -1,4 +1,5 @@
 /** @type {import("@types/tailwindcss/tailwind-config").TailwindConfig } */
+
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}"],
   mode: "jit",
@@ -33,6 +34,19 @@ module.exports = {
       boxShadow: {
         // TODO: this should use the actual colors so it stays consistent
         icterine: "10px 10px 0 0 #4857E2",
+        black: "10px 10px 0 0 #000",
+      },
+      backgroundImage: {
+        "radial-gradient-tl":
+          "radial-gradient(circle at 0% 0%, var(--tw-gradient-stops)) 50%",
+        "radial-gradient-c":
+          "radial-gradient(circle at 50% 50%, var(--tw-gradient-stops)) ",
+        "radial-gradient-tr":
+          "radial-gradient(circle at 0% 100%, var(--tw-gradient-stops)) 50%",
+        "radial-gradient-br":
+          "radial-gradient(circle at 100% 100%, var(--tw-gradient-stops) 50%)",
+        "radial-gradient-bl":
+          "radial-gradient(circle at 0% 100%, var(--tw-gradient-stops)) 50%",
       },
     },
     fontFamily: {
@@ -45,5 +59,8 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/aspect-ratio"),
+    require("@tailwindcss/typography"),
+  ],
 }
