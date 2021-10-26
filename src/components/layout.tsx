@@ -114,7 +114,7 @@ export const Hero: React.FunctionComponent = ({ children }) => (
         <Header />
       </div>
       <div className="flex-1 px-8 pb-12 mx-auto max-w-7xl">
-        <div className="grid-cols-1 gap-8 pt-8 mb-4 md:grid-cols-3 md:grid md:gap-0 md:mb-0 md:mt-32">
+        <div className="grid-cols-1 gap-8 pt-8 mb-4 md:grid-cols-3 md:grid md:gap-0 md:mb-0 lg:mt-32">
           <div className="col-span-2 b-12 md:mb-0">
             {children}
             <Link to="#first-section">

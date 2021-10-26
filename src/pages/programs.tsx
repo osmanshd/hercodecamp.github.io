@@ -206,7 +206,7 @@ const ProgramsPage: React.FunctionComponent<PageProps> = ({ data }) => {
             Can’t wait to learn? Learn now with the past program materials
             below.
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
+          <div className="flex flex-wrap items-stretch gap-4">
             {(
               data as { allMarkdownRemark: { nodes: Array<Program> } }
             ).allMarkdownRemark.nodes
@@ -237,13 +237,13 @@ export const UpcomingProgramsSection: React.FunctionComponent<{
         For beginners with little to no coding experience. Oh, and they’re all
         free.
       </p>
-      <div className="flex flex-wrap justify-center gap-4">
+      <div className="flex flex-wrap items-stretch justify-center gap-4">
         {programs
           .filter(
             ({ frontmatter: { date } }) => date && new Date(date) > new Date()
           )
           .map(program => (
-            <ProgramCard {...program} />
+            <ProgramCard key={program.frontmatter.title} {...program} />
           ))}
       </div>
       {withMore ? (
@@ -277,7 +277,7 @@ const ProgramCard: React.FunctionComponent<Program> = ({
   const parsedDate = new Date(date || 0) //parse(date, "yyyy-mm-dd", new Date())
   return (
     <Link to={`/programs/${slug}`}>
-      <div className="max-w-sm p-5 text-left bg-white border border-black font-body hover:shadow-black hover:bg-gray-100 hover:drop-shadow-xl hover:!text-black">
+      <div className="max-w-sm p-5 text-left bg-white border border-black font-body hover:shadow-black hover:bg-gray-100 hover:drop-shadow-xl hover:!text-black h-full flex-col flex">
         {tags ? (
           <div className="flex gap-2 mb-2">
             {tags.map(tag => (
@@ -287,9 +287,9 @@ const ProgramCard: React.FunctionComponent<Program> = ({
         ) : null}
         <div className="font-medium">{title}</div>
         {date ? <div>{format(parsedDate, "MMMM do, yyyy")}</div> : null}
-        <p className="font-light">{blurb}</p>
+        <p className="mb-5 font-light">{blurb}</p>
         {new Date() < parsedDate ? (
-          <div className="mt-5 text-center">
+          <div className="mt-auto text-center">
             <Link to="/apply">
               <IrisLinkButton>Apply Now</IrisLinkButton>
             </Link>
