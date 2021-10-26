@@ -259,12 +259,12 @@ export const UpcomingProgramsSection: React.FunctionComponent<{
 
 export interface Program {
   frontmatter: {
-    title: string
-    blurb: string
-    creators: Array<string>
-    tags: Array<string>
-    date: Date
-    slug: string
+    title?: string
+    blurb?: string
+    creators?: Array<string>
+    tags?: Array<string>
+    date?: Date
+    slug?: string
   }
   html: string
 }
@@ -274,15 +274,17 @@ const ProgramCard: React.FunctionComponent<Program> = ({
 }) => {
   // TODO: there is a bit of an edge case here, it is upcomong if it hasn't happened but idk what happens if applications are closed? or what time the event happens at.
 
-  const parsedDate = new Date(date) //parse(date, "yyyy-mm-dd", new Date())
+  const parsedDate = new Date(date || 0) //parse(date, "yyyy-mm-dd", new Date())
   return (
     <Link to={`/programs/${slug}`}>
       <div className="max-w-sm p-5 text-left bg-white border border-black font-body hover:shadow-black hover:bg-gray-100 hover:drop-shadow-xl hover:!text-black">
-        <div className="flex gap-2 mb-2">
-          {tags.map(tag => (
-            <Tag key={tag} tag={tag} />
-          ))}
-        </div>
+        {tags ? (
+          <div className="flex gap-2 mb-2">
+            {tags.map(tag => (
+              <Tag key={tag} tag={tag} />
+            ))}
+          </div>
+        ) : null}
         <div className="font-medium">{title}</div>
         {date ? <div>{format(parsedDate, "MMMM do, yyyy")}</div> : null}
         <p className="font-light">{blurb}</p>

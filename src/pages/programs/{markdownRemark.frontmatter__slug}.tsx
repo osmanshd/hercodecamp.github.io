@@ -15,16 +15,20 @@ const Template: React.FunctionComponent<PageProps> = ({ data }) => {
       <Header bg="light" />
       <div className="max-w-5xl px-8 py-10 mx-auto">
         <div className="px-8 py-10 mb-4 bg-gray-100 rounded font-body">
-          <div className="flex gap-2 mb-2">
-            {tags.map(tag => (
-              <Tag key={tag} tag={tag} />
-            ))}
-          </div>
+          {tags ? (
+            <div className="flex gap-2 mb-2">
+              {tags.map(tag => (
+                <Tag key={tag} tag={tag} />
+              ))}
+            </div>
+          ) : null}
           <h1 className="font-mono text-3xl font-bold">{title}</h1>
-          <div>
-            <span className="font-bold">Creators: </span>
-            {creators.join(", ")}
-          </div>
+          {creators ? (
+            <div>
+              <span className="font-bold">Creators: </span>
+              {creators.join(", ")}
+            </div>
+          ) : null}
 
           <div
             className="prose font-body"
