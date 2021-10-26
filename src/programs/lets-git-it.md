@@ -1,6 +1,6 @@
 ---
 tags:
-  - 🧩 Byte-Sized Series
+  - 🧩 Byte-sized Series
 title: Let’s git it
 blurb: Learn to collaborate and control versions of your code with git
 ---

@@ -7,11 +7,10 @@
 
 import PropTypes from "prop-types"
 import React from "react"
-import { Link, PageProps } from "gatsby"
+import { Link } from "gatsby"
 import Logo from "../assets/logo-mark.inline.svg"
 import { StaticImage } from "gatsby-plugin-image"
 import Marquee from "react-easy-marquee"
-import Helmet from "react-helmet"
 import {
   Github,
   Instagram,
@@ -136,7 +135,6 @@ export const Hero: React.FunctionComponent = ({ children }) => (
       </div>
       <Banner />
     </div>
-    {/* TODO: Should be visible from first page. */}
   </section>
 )
 
@@ -195,7 +193,7 @@ export const Footer = () => (
       </a>
     </div>
     {/* @ts-ignore */}
-    <Marquee pauseOnHover duration={20000} height={125}>
+    {/* <Marquee pauseOnHover duration={20000} height={125}>
       <div className="mx-6">
         <StaticImage
           height={75}
@@ -231,7 +229,7 @@ export const Footer = () => (
           src="../assets/sponsor-uoft.png"
         />
       </div>
-    </Marquee>
+    </Marquee> */}
 
     <div className="flex justify-center h-10 gap-3 mb-4 text-gray-400 content-middle">
       <a

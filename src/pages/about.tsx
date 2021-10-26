@@ -1,17 +1,12 @@
 import React, { MutableRefObject, useEffect, useRef, useState } from "react"
-import { Link, PageProps } from "gatsby"
-import Logo from "../assets/logo-mark.inline.svg"
+import { PageProps } from "gatsby"
 import Layout, { Footer, Hero } from "../components/layout"
-import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
-import Marquee from "react-easy-marquee"
+import { StaticImage } from "gatsby-plugin-image"
 import Helmet from "react-helmet"
-
 import { easeSinOut } from "d3-ease"
 import { Linkedin, Twitter } from "@styled-icons/boxicons-logos"
-import { kebabCase } from "lodash"
-import joannaProfile from "../assets/people/joanna-pineda-square.jpg"
 
-// Because the buttons are buttons they tab twice :(. I shoulda made them inline-blocks lollllll
+import joannaProfile from "../assets/people/joanna-pineda-square.jpg"
 
 const AboutUsPage: React.FunctionComponent<PageProps> = () => (
   <Layout>
@@ -76,7 +71,6 @@ const AboutUsPage: React.FunctionComponent<PageProps> = () => (
       </div>
     </section>
     <section>
-      {/* TODO: need a max width here */}
       <div className="mx-auto ">
         <StaticImage
           src="../assets/smiling-participants.jpg"
@@ -89,7 +83,6 @@ const AboutUsPage: React.FunctionComponent<PageProps> = () => (
         <div className="pb-10 text-3xl font-bold text-center text-white uppercase">
           Our Work in Numbers
         </div>
-        {/* TODO: For mobile I'll make it like a grid with the left hand side having the numbers and the right having the text. */}
         <div className="flex flex-wrap justify-center font-mono gap-14">
           {[
             {
@@ -263,7 +256,7 @@ function useFirstTimeOnScreen(
     return () => {
       observer.disconnect()
     }
-  }, [ref.current])
+  }, [ref, callback])
 }
 type Social = "twitter" | "linkedin"
 const SocialImage: React.FunctionComponent<{

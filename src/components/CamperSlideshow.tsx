@@ -17,10 +17,6 @@ const CampersSlideshow: React.FunctionComponent<{
 
     const intervalId = setInterval(update, interval)
 
-    if (currentSlide > maxLength) {
-      setCurrentSlide(0)
-    }
-
     return () => clearInterval(intervalId)
   }, [interval, maxLength])
 

@@ -9,8 +9,6 @@ import { MailingListSection } from "."
 import ReactMarkdown from "react-markdown"
 import { X, PlusLg } from "@styled-icons/bootstrap"
 
-// Because the buttons are buttons they tab twice :(. I shoulda made them inline-blocks lollllll
-
 const VolunteerPage: React.FunctionComponent<PageProps> = () => (
   <Layout>
     {/* Might need a minimum height. */}
@@ -98,8 +96,8 @@ const OpportunityComponent: React.FunctionComponent<
       }
     }
 
-    addEventListener("keydown", handleEscapeKey)
-    return () => removeEventListener("keydown", handleEscapeKey)
+    window.addEventListener("keydown", handleEscapeKey)
+    return () => window.removeEventListener("keydown", handleEscapeKey)
   }, [onClose])
   return (
     <div>
@@ -107,7 +105,7 @@ const OpportunityComponent: React.FunctionComponent<
         onClick={onClose}
         className="fixed top-0 bottom-0 left-0 right-0 z-10 w-screen h-screen bg-black opacity-50 cursor-pointer"
       />
-      <div className="fixed top-0 bottom-0 right-0 z-50 py-32 bg-gray-800 px-14 left-1/2 font-body">
+      <div className="fixed top-0 bottom-0 left-0 right-0 z-50 py-32 bg-gray-800 px-14 lg:left-1/2 font-body">
         <span
           onClick={() => onClose()}
           className="absolute text-gray-100 cursor-pointer right-6 top-6"

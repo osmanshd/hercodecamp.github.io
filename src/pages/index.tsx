@@ -1,17 +1,17 @@
 import React from "react"
-import { Link, PageProps } from "gatsby"
+import { graphql, Link, PageProps } from "gatsby"
 import Layout, { Footer, Hero } from "../components/layout"
 import { StaticImage } from "gatsby-plugin-image"
 import Helmet from "react-helmet"
 
-import { ChevronCompactDown } from "@styled-icons/bootstrap"
 import CamperSlideshowSection from "../components/CamperSlideshow"
 import {
   TransparentLinkButton,
   IcterineLinkButton,
 } from "../components/LinkButton"
+import { Program, UpcomingProgramsSection } from "./programs"
 
-const IndexPage: React.FunctionComponent<PageProps> = () => (
+const IndexPage: React.FunctionComponent<PageProps> = ({ data }) => (
   <Layout>
     {/* Might need a minimum height. */}
     <Helmet title="HER CODE CAMP" />
@@ -54,7 +54,6 @@ const IndexPage: React.FunctionComponent<PageProps> = () => (
             specifically targeted to high school students who identify as a
             woman, trans, and/or non-binary.
           </p>
-          {/* TODO: Yellow border looks bad in this case */}
           <Link to="/about">
             <IcterineLinkButton>Learn More</IcterineLinkButton>
           </Link>
@@ -90,9 +89,6 @@ const IndexPage: React.FunctionComponent<PageProps> = () => (
         </div>
       </div>
     </section>
-
-    {/* TODO: not enough padding on new lines of the title. */}
-    {/* TODO: I just went with dark grey. */}
     <section className="px-6 bg-gray-800 md:px-12">
       <div className="grid items-center grid-cols-1 gap-16 py-32 mx-auto md:grid-cols-3 max-w-7xl md:gap-12">
         {[
@@ -123,56 +119,27 @@ const IndexPage: React.FunctionComponent<PageProps> = () => (
             <p className="sm:mt[-30px] mt-[-20px] font-mono font-extralight text-white text-lg mb-4">
               {testimonial}
             </p>
-            {/* TODO: need to match font colours */}
-            <span className="px-1 font-mono text-gray-800 bg-white text-md">
+            <span className="px-1 font-mono text-gray-800 bg-white decoration-clone text-md">
               {name}
             </span>
             <br />
-            <span className="px-1 font-mono font-light text-gray-800 bg-white">
+            <span className="px-1 font-mono font-light text-gray-800 bg-white decoration-clone">
               {title}
             </span>
           </div>
         ))}
       </div>
     </section>
-    <section
-      className="px-10 py-20 bg-radial-gradient-c from-icterine to-white"
-      // style={{
-      //   backgroundImage:
-      //     "radial-gradient(circle at 50% 50%, rgba(240,234,80,1) 0%, #FFFFFF 100%)",
-      // }}
-    >
-      <div className="text-center">
-        <h2 className="mb-4 font-mono text-3xl font-bold">Upcoming Programs</h2>
-        <p className="mb-12 text-lg font-light font-body">
-          For beginners with little to no coding experience. Oh, and they’re all
-          free.
-        </p>
-        <div className="flex items-center justify-center">
-          <div className="max-w-sm p-5 text-left bg-white border border-black font-body shadow-black">
-            <div className="font-medium">
-              Byte-sized: How to start a project
-            </div>
-            <div>December 1, 2021</div>
-            <p className="font-light">
-              Ever wanted to start coding, but don’t know where to begin?
-            </p>
-            <div className="mt-5 text-center">
-              <Link to="/apply">
-                <IcterineLinkButton>Apply Now</IcterineLinkButton>
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className="mt-10 text-lg font-bold uppercase font--body text-iris">
-          <Link to="/programs" className="hover:underline hover:text-black">
-            More {">"}
-          </Link>
-        </div>
-      </div>
-    </section>
+    <UpcomingProgramsSection
+      //@ts-ignore
+      withMore
+      programs={
+        (data as { allMarkdownRemark: { nodes: Array<Program> } })
+          .allMarkdownRemark.nodes
+      }
+    />
+
     <section>
-      {/* TODO: need a max width here */}
       <div className="mx-auto ">
         <StaticImage
           src="../assets/all-participants.jpg"
@@ -220,13 +187,8 @@ const IndexPage: React.FunctionComponent<PageProps> = () => (
 export const MailingListSection: React.FunctionComponent = () => (
   <section className="h-[700px] flex justify-center items-center bg-radial-gradient-br from-icterine to-iris">
     <div className="px-4 text-gray-200 md:w-2/5 md:bg-opacity-40 md:bg-white md:rounded-lg md:px-16 md:py-20 md:text-black">
-      {/* <div className="relative w-1/3 py-20 bg-white bg-opacity-75 border border-gray-500 rounded-b-lg h-1/3"> */}
-
-      {/* <div className="absolute top-0 left-0 text-lg font-bold">X</div> */}
-
       <div className="text-center my-30">
         <h2 className="mb-3 font-mono text-3xl font-bold">Stay in the loop!</h2>
-        {/* NOTE: I changed from to stay in the loop in the body to keep up with */}
         <p className="mb-8 text-xl font-light font-body">
           Join our quarterly newsletter to keep up with news, volunteer
           opportunities, and upcoming events.
@@ -239,4 +201,21 @@ export const MailingListSection: React.FunctionComponent = () => (
     </div>
   </section>
 )
+
+export const pageQuery = graphql`
+  query IndexPage {
+    allMarkdownRemark {
+      nodes {
+        frontmatter {
+          title
+          tags
+          blurb
+          date
+          slug
+        }
+      }
+    }
+  }
+`
+
 export default IndexPage
