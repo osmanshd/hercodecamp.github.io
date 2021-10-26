@@ -2,7 +2,7 @@ import React from "react"
 
 export const IcterineLinkButton: React.FunctionComponent = ({ children }) => {
   return (
-    <span className="inline-block px-5 py-2 font-mono font-bold uppercase cursor-pointer bg-icterine hover:bg-iris hover:text-white">
+    <span className="inline-block px-5 py-2 font-mono font-bold text-black uppercase cursor-pointer bg-icterine hover:bg-iris hover:text-white">
       {children}
     </span>
   )

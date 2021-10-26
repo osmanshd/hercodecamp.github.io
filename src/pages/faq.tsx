@@ -1,9 +1,9 @@
 import React from "react"
-import { LightHeader } from "../components/layout"
+import { Footer, Header } from "../components/layout"
 
 const FAQPage: React.FunctionComponent = () => (
   <div className="mx-auto max-w-7xl">
-    <LightHeader />
+    <Header bg="light" />
     <section className="py-20 px-11">
       <h1 className="mb-10 font-bold text-7xl font-body">FAQs</h1>
       <div className="flex flex-wrap gap-8 sm:mx-auto ">
@@ -36,6 +36,7 @@ const FAQPage: React.FunctionComponent = () => (
         ))}
       </div>
     </section>
+    <Footer />
   </div>
 )
 

@@ -23,12 +23,15 @@ const AboutUsPage: React.FunctionComponent<PageProps> = () => (
         Gather around the fire for a little story about HCC.
       </p>
     </Hero>
-    <section className="py-44 bg-radial-gradient-c from-icterine to-white">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="mb-8 text-4xl font-bold text-iris font-body">
+    <section
+      id="first-section"
+      className="py-10 md:py-44 bg-radial-gradient-c from-icterine to-white"
+    >
+      <div className="max-w-5xl px-8 mx-auto ">
+        <h2 className="mb-8 text-4xl font-bold text-center text-iris font-body">
           We make space for everyone in technology
         </h2>
-        <div className="grid grid-cols-2 gap-16 text-lg font-light text-justify font-body">
+        <div className="grid grid-cols-1 gap-10 text-lg font-light text-justify md:gap-16 md:grid-cols-2 font-body">
           <div>
             HER CODE CAMP is a non-profit organization that aims to empower
             under-represented communities in technology. Since being founded in
@@ -49,22 +52,22 @@ const AboutUsPage: React.FunctionComponent<PageProps> = () => (
       </div>
     </section>
     <section
-      className="min-h-[75vh] pt-40 pb-60 bg-radial-gradient-br from-icterine to-iris"
+      className="min-h-[75vh] py-14 md:pt-40 md:pb-60 bg-radial-gradient-br from-icterine to-iris"
       // style={{
       //   backgroundImage:
       //     "radial-gradient(circle at 100% 100%, rgba(240,234,80,1) 0%, rgba(72,87,226,1) 50%)",
       // }}
     >
-      <div className="grid max-w-5xl grid-cols-2 gap-40 mx-auto text-white">
+      <div className="grid max-w-5xl grid-cols-1 gap-10 px-12 mx-auto text-white md:gap-40 md:grid-cols-2">
         <div>
-          <h2 className="mb-4 font-mono text-4xl font-bold">Our Vision</h2>
+          <h2 className="mb-3 font-mono text-4xl font-bold">Our Vision</h2>
 
           <p className="text-lg font-light font-body">
             A tech community driven by diversity.
           </p>
         </div>
         <div>
-          <h2 className="mb-4 font-mono text-4xl font-bold">Our Mission</h2>
+          <h2 className="mb-3 font-mono text-4xl font-bold">Our Mission</h2>
           <p className="text-lg font-light font-body">
             Hacking our future by igniting the potential of under-represented
             communities in tech.
@@ -81,62 +84,48 @@ const AboutUsPage: React.FunctionComponent<PageProps> = () => (
         />
       </div>
     </section>
-    <section className="py-32 bg-gray-800">
-      <div className="max-w-4xl mx-auto">
+    <section className="px-8 py-10 bg-gray-800 md:py-32">
+      <div className="max-w-6xl mx-auto">
         <div className="pb-10 text-3xl font-bold text-center text-white uppercase">
           Our Work in Numbers
         </div>
         {/* TODO: For mobile I'll make it like a grid with the left hand side having the numbers and the right having the text. */}
-        <div className="flex justify-center font-mono gap-14">
-          <div className="block md:text-center">
-            <div className="font-light text-7xl text-icterine">
-              <CounterUpper
-                duration={3000 + Math.random() * 500 - 250}
-                number={480}
-              />
-              %
+        <div className="flex flex-wrap justify-center font-mono gap-14">
+          {[
+            {
+              duration: 3000 + Math.random() * 500 - 250,
+              number: 480,
+              label: "increase in participants since 2019",
+              unit: "%",
+            },
+            {
+              duration: 3000 + Math.random() * 500 - 250,
+              number: 314,
+              label: "girls learned to code",
+            },
+            {
+              duration: 1800 + Math.random() * 500 - 250,
+              number: 6,
+              label: "events hosted since 2019",
+            },
+            {
+              duration: 2000 + Math.random() * 500 - 250,
+              number: 17,
+              label: "mentorship projects",
+            },
+          ].map(({ unit, label, number, duration }) => (
+            <div className="text-center">
+              <div className="font-light text-7xl text-icterine">
+                <CounterUpper duration={duration} number={number} />
+                {unit || ""}
+              </div>
+              <div className="mt-4 font-light text-gray-400">{label}</div>
             </div>
-            <div className="mt-6 font-light text-gray-400 ">
-              increase in participants since 2019
-            </div>
-          </div>
-          <div className="text-center">
-            <div className="font-light text-7xl text-icterine">
-              <CounterUpper
-                duration={3000 + Math.random() * 500 - 250}
-                number={314}
-              />
-            </div>
-            <div className="mt-6 font-light text-gray-400">
-              girls learned to code
-            </div>
-          </div>
-          <div className="text-center">
-            <div className="font-light text-7xl text-icterine">
-              <CounterUpper
-                duration={1800 + Math.random() * 500 - 250}
-                number={6}
-              />
-            </div>
-            <div className="mt-6 font-light text-gray-400">
-              events hosted since 2019
-            </div>
-          </div>
-          <div className="text-center">
-            <div className="font-light text-7xl text-icterine">
-              <CounterUpper
-                duration={2000 + Math.random() * 500 - 250}
-                number={17}
-              />
-            </div>
-            <div className="mt-6 font-light text-gray-400">
-              mentorship projects
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
-    <section className="py-32 bg-radial-gradient-c from-icterine to-white">
+    <section className="px-8 py-10 md:py-32 bg-radial-gradient-c from-icterine to-white">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl font-bold uppercase mb-14 text-iris">
           The spark ✨
@@ -151,11 +140,11 @@ const AboutUsPage: React.FunctionComponent<PageProps> = () => (
       </div>
     </section>
     <section>
-      <div className="max-w-6xl pb-20 mx-auto pt-28">
+      <div className="max-w-6xl px-8 py-12 mx-auto md:pb-20 md:pt-28">
         <h2 className="mb-10 font-mono text-4xl font-bold text-center">
           Our People
         </h2>
-        <div className="grid grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
           {[
             {
               name: "Joanna Pineda",
@@ -188,9 +177,9 @@ const AboutUsPage: React.FunctionComponent<PageProps> = () => (
               } as { [key in Social]: string },
             },
           ].map(({ image, name, positions, bio, socials }) => (
-            <div className="grid grid-cols-8 gap-4 font-body">
+            <div className="grid-cols-8 gap-4 md:grid font-body">
               <img
-                className="col-span-3 rounded shadow"
+                className="w-1/2 col-span-3 mx-auto mb-4 rounded shadow md:w-auto md:mb-0 md:mx-0"
                 src={joannaProfile}
                 alt={`Headshot of ${name}`}
               />
@@ -258,20 +247,19 @@ function useFirstTimeOnScreen(
   callback: () => void
 ) {
   const hasIntersected = useRef(false)
-  const observer = new IntersectionObserver(([{ isIntersecting }]) => {
-    console.log(isIntersecting)
-    if (!hasIntersected.current && isIntersecting) {
-      callback()
-      hasIntersected.current = true
-    }
-  })
 
   useEffect(() => {
+    const observer = new IntersectionObserver(([{ isIntersecting }]) => {
+      if (!hasIntersected.current && isIntersecting) {
+        callback()
+        hasIntersected.current = true
+      }
+    })
+
     if (ref.current) {
       observer.observe(ref.current)
     }
 
-    // Remove the observer as soon as the component is unmounted
     return () => {
       observer.disconnect()
     }

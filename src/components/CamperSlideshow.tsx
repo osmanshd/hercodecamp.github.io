@@ -36,6 +36,7 @@ const CampersSlideshow: React.FunctionComponent<{
       <div className="flex justify-center gap-2 mt-10">
         {children.map((_, i) => (
           <span
+            key={i}
             onClick={() => setCurrentSlide(i)}
             className={`inline-block w-4 h-4 rounded-full cursor-pointer hover:bg-icterine ${
               i === currentSlide ? "bg-icterine" : "bg-gray-100"
@@ -48,9 +49,9 @@ const CampersSlideshow: React.FunctionComponent<{
 }
 
 const CamperSlideshowSection: React.FunctionComponent = () => (
-  <section className="py-32 mx-auto max-w-7xl">
+  <section className="py-10 mx-auto md:py-32 max-w-7xl">
     <div className="max-w-5xl mx-auto">
-      <h2 className="mb-8 ml-12 text-4xl font-bold uppercase text-iris">
+      <h2 className="mb-8 text-4xl font-bold text-center uppercase md:text-left md:ml-12 text-iris">
         Projects by Campers
       </h2>
 
@@ -77,11 +78,10 @@ const CamperSlideshowSection: React.FunctionComponent = () => (
             description: `Check out this project made by Rachel and Shahad, mentored by Raghav at our annual mentorship program. In their game, the goal is to hit as many aliens as you can before they reach you!`,
           },
         ].map(({ gif, title, event, description }) => (
-          // TODO: these are not centering properly atm.
-          <div className="flex justify-center">
-            <div className="grid grid-cols-8 gap-10">
+          <div className="flex justify-center" key={title}>
+            <div className="grid-cols-8 gap-10 md:grid">
               <img
-                className="col-span-3 shadow-icterine"
+                className="col-span-3 mb-8 shadow-icterine md:mb-0"
                 src={gif}
                 alt="A gif of a pong game made by campers."
               />

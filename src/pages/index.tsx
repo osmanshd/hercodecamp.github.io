@@ -11,8 +11,6 @@ import {
   IcterineLinkButton,
 } from "../components/LinkButton"
 
-// Because the buttons are buttons they tab twice :(. I shoulda made them inline-blocks lollllll
-
 const IndexPage: React.FunctionComponent<PageProps> = () => (
   <Layout>
     {/* Might need a minimum height. */}
@@ -35,12 +33,9 @@ const IndexPage: React.FunctionComponent<PageProps> = () => (
             <TransparentLinkButton>Get Involved</TransparentLinkButton>
           </Link>
         </div>
-        <Link to="#hello-world">
-          <ChevronCompactDown className="h-10 mt-10 ml-4 text-center text-white animate-bounce" />
-        </Link>
       </div>
     </Hero>
-    <section id="hello-world">
+    <section id="first-section">
       <div className="content-center grid-cols-2 gap-20 px-8 py-10 mx-auto max-w-7xl md:px-14 md:py-40 md:grid">
         <div className="mb-6 md:mb-0">
           <StaticImage
@@ -53,14 +48,14 @@ const IndexPage: React.FunctionComponent<PageProps> = () => (
           <h2 className="mb-2 font-mono text-3xl font-bold">
             print("HELLO WORLD")
           </h2>
-          <p className="mb-4 text-lg font-body">
+          <p className="mb-4 text-xl font-light font-body">
             HER CODE CAMP is a non-profit organization that empowers
             under-represented communities in technology. We host free programs
             specifically targeted to high school students who identify as a
             woman, trans, and/or non-binary.
           </p>
           {/* TODO: Yellow border looks bad in this case */}
-          <Link to="/subscribe">
+          <Link to="/about">
             <IcterineLinkButton>Learn More</IcterineLinkButton>
           </Link>
         </div>
@@ -141,7 +136,7 @@ const IndexPage: React.FunctionComponent<PageProps> = () => (
       </div>
     </section>
     <section
-      className="py-20 bg-radial-gradient-c from-icterine to-white"
+      className="px-10 py-20 bg-radial-gradient-c from-icterine to-white"
       // style={{
       //   backgroundImage:
       //     "radial-gradient(circle at 50% 50%, rgba(240,234,80,1) 0%, #FFFFFF 100%)",
@@ -188,9 +183,6 @@ const IndexPage: React.FunctionComponent<PageProps> = () => (
     <CamperSlideshowSection />
     <section className="bg-icterine">
       <div className="max-w-5xl px-8 py-24 mx-auto md:px-12">
-        <h2 className="mb-12 text-4xl font-bold text-center font-body text-body">
-          Are you in?
-        </h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-20">
           <div className="px-10 pt-20 pb-12 text-center bg-white rounded shadow-xl">
             {/* <StaticImage alt="Emoji style image of woman using computer." /> */}

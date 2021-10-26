@@ -1,11 +1,16 @@
 /** @type {import("@types/tailwindcss/tailwind-config").TailwindConfig } */
 
+const colors = require("tailwindcss/colors")
+
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}"],
   mode: "jit",
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      flex: {
+        full: "1 1 100%",
+      },
       keyframes: {
         fadeUp: {
           "0%": {
@@ -30,6 +35,7 @@ module.exports = {
         flame: "#DC602E",
         foresGreenCrayola: "#6BAA75",
         darkOraange: "#F58A07",
+        gray: colors.gray,
       },
       boxShadow: {
         // TODO: this should use the actual colors so it stays consistent

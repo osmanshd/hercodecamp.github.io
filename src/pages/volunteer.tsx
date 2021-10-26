@@ -25,7 +25,10 @@ const VolunteerPage: React.FunctionComponent<PageProps> = () => (
         There’s always room for s’more.
       </p>
     </Hero>
-    <section className="bg-radial-gradient-c from-icterine to-white">
+    <section
+      id="first-section"
+      className="bg-radial-gradient-c from-icterine to-white"
+    >
       <div className="content-center grid-cols-2 gap-20 px-8 py-10 mx-auto max-w-7xl md:px-14 md:py-40 md:grid">
         <div className="mb-6 md:mb-0">
           <StaticImage
@@ -36,7 +39,7 @@ const VolunteerPage: React.FunctionComponent<PageProps> = () => (
         </div>
         <div className="flex flex-col items-start justify-center">
           <h2 className="mb-2 font-mono text-3xl font-bold">Volunteer 🔑</h2>
-          <p className="mb-4 text-lg font-body">
+          <p className="mb-4 text-xl font-light font-body">
             Our volunteers are key to making it all happen. We are always
             looking for folks with a range of experience. Whether you’re a
             designer, developer, or are just interested in diversifying tech,
@@ -50,7 +53,7 @@ const VolunteerPage: React.FunctionComponent<PageProps> = () => (
       </div>
     </section>
     <OpportunitiesSection />
-    <section className="py-40 bg-icterine">
+    <section className="px-8 py-40 bg-icterine">
       <div className="max-w-5xl mx-auto font-body">
         <h2 className="mb-6 text-3xl font-bold uppercase text-iris">
           Corporate Partners
@@ -85,7 +88,7 @@ interface Opportunity {
   description: string
 }
 
-const Opportunity: React.FunctionComponent<
+const OpportunityComponent: React.FunctionComponent<
   Opportunity & { onClose: () => void }
 > = ({ title, description, onClose }) => {
   useEffect(() => {
@@ -111,8 +114,8 @@ const Opportunity: React.FunctionComponent<
         >
           <X className="w-8 h-8" />
         </span>
-        <h2 className="mb-10 text-4xl font-bold text-gray-200">{title}</h2>
-        <ReactMarkdown className="prose !text-gray-200 prose-lg !font-light !font-body mb-14">
+        <h2 className="mb-10 text-4xl font-bold text-gray-50">{title}</h2>
+        <ReactMarkdown className="prose !text-gray-50 prose-lg !font-light !font-body mb-14">
           {description}
         </ReactMarkdown>
 
@@ -134,7 +137,7 @@ const OpportunitiesSection: React.FunctionComponent = () => {
     setSelectedOpportunity(null)
   }
 
-  // These should be in a json file or something then I could work with them easier :shrug"
+  // These should be in a json file or something then I could work with them easier :shrug:
 
   const opportunities: Array<Opportunity> = [
     {
@@ -179,7 +182,10 @@ We are currently looking for advisors to help grow our organization. This positi
       {selectedOpportunity === null ? (
         ""
       ) : (
-        <Opportunity onClose={close} {...opportunities[selectedOpportunity]} />
+        <OpportunityComponent
+          onClose={close}
+          {...opportunities[selectedOpportunity]}
+        />
       )}
       {/* TODO: this isn't ideal but it is good enough */}
       <h2 className="mb-10 text-4xl font-bold text-center uppercase text-iris font-body">

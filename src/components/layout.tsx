@@ -18,6 +18,8 @@ import {
   Twitter,
   Youtube,
 } from "@styled-icons/boxicons-logos"
+import Banner from "./Banner"
+import { ChevronCompactDown } from "@styled-icons/bootstrap"
 
 // TODO: add seo (helmet descriptions etc.)
 
@@ -37,57 +39,70 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export const Header: React.FunctionComponent = () => (
-  <nav className="hidden w-full pt-8 text-right md:block">
-    <ul className="flex items-center justify-end gap-4 text-gray-300 uppercase align-middle whitespace-nowrap">
-      <li className="flex-1 text-left">
-        <Link className="relative group" to="/">
+export const Header: React.FunctionComponent<{ bg?: "light" | "dark" }> = ({
+  bg = "dark",
+}) => (
+  <nav className="w-full px-8 pt-8 mx-auto max-w-7xl">
+    <ul
+      className={`flex flex-wrap items-center justify-center gap-4  uppercase align-middle md:justify-end md:flex-nowrap whitespace-nowrap ${
+        bg === "dark" ? "text-gray-200" : "text-gray-800"
+      }`}
+    >
+      <li className="w-full text-center flex-full md:text-left md:w-auto">
+        <Link
+          className={`${
+            bg === "dark"
+              ? "text-white hover:text-icterine"
+              : "text-black hover:text-iris"
+          }`}
+          to="/"
+        >
           {/* TODO: add a fun glow effect to this one. */}
-          <Logo className="text-left h-8 group-hover:text-icterine text-white inline-block mt-[-5px]" />
-          <span className="ml-2 text-xl font-black text-white uppercase group-hover:text-icterine">
+          <Logo className="text-left h-10 md:h-8 inline-block mt-[-5px]" />
+          <span className="ml-2 text-2xl font-black uppercase md:text-xl ">
             HER CODE CAMP
           </span>
         </Link>
       </li>
       <li>
-        <Link to="/about">About Us</Link>
-      </li>
-      <li>
-        <Link to="/programs">Programs</Link>
-      </li>
-      <li>
-        <Link to="/volunteer">Get Involved</Link>
-      </li>
-      <li className="normal-case">
-        <Link to="/faq">FAQs</Link>
-      </li>
-    </ul>
-  </nav>
-)
-
-export const LightHeader: React.FunctionComponent = () => (
-  <nav className="hidden w-full pt-8 text-right md:block">
-    <ul className="flex items-center justify-end gap-4 text-gray-600 uppercase align-middle whitespace-nowrap ">
-      <li className="flex-1 text-left">
-        <Link className="relative group" to="/">
-          {/* TODO: add a fun glow effect to this one. */}
-          <Logo className="text-left h-8 group-hover:text-icterine text-black inline-block mt-[-5px]" />
-          <span className="ml-2 text-xl font-black text-black uppercase group-hover:text-icterine">
-            HER CODE CAMP
-          </span>
+        <Link
+          className={`${
+            bg === "dark" ? "hover:text-icterine" : "hover:text-iris"
+          }`}
+          to="/about"
+        >
+          About Us
         </Link>
       </li>
       <li>
-        <Link to="/about">About Us</Link>
+        <Link
+          className={`${
+            bg === "dark" ? "hover:text-icterine" : "hover:text-iris"
+          }`}
+          to="/programs"
+        >
+          Programs
+        </Link>
       </li>
       <li>
-        <Link to="/programs">Programs</Link>
+        <Link
+          className={`${
+            bg === "dark" ? "hover:text-icterine" : "hover:text-iris"
+          }`}
+          to="/volunteer"
+        >
+          Get Involved
+        </Link>
       </li>
       <li>
-        <Link to="/volunteer">Get Involved</Link>
-      </li>
-      <li className="normal-case">
-        <Link to="/faq">FAQs</Link>
+        <Link
+          className={`normal-case ${
+            bg === "dark" ? "hover:text-icterine" : "hover:text-iris"
+          }`}
+          to="/faq"
+        >
+          FAQs
+        </Link>
       </li>
     </ul>
   </nav>
@@ -95,30 +110,33 @@ export const LightHeader: React.FunctionComponent = () => (
 
 export const Hero: React.FunctionComponent = ({ children }) => (
   <section className="relative min-h-screen md:h-1 bg-gradient-to-r from-darkIris to-iris animate-text-in">
-    <div className="flex-col px-8 pb-12 mx-auto max-w-7xl md:flex md:h-full">
-      <Header />
-      <div
-        style={{
-          gridTemplateColumns: "2fr 1fr",
-        }}
-        className="flex-1 h-full grid-cols-1 gap-8 pt-8 mb-4 md:grid md:grid-cols-2 md:gap-0 md:mb-0 md:mt-32"
-      >
-        <div className="mb-12 md:mb-0">{children}</div>
-        {/* TODO: I should add a fun glowing animation to this background it could look cool. */}
-        {/* TODO: Image is loaded with a weird background thing. */}
-        <StaticImage
-          src="../assets/code-camp-art.png"
-          className="self-end w-full p-8"
-          imgStyle={{ objectFit: "contain" }}
-          alt="Illustration of camp participants sitting around a fire where the logs are made using code tags."
-        />
+    <div className="flex-col md:h-full md:flex ">
+      <div className="self-stretch pb-12">
+        <Header />
       </div>
+      <div className="flex-1 px-8 pb-12 mx-auto max-w-7xl">
+        <div className="grid-cols-1 gap-8 pt-8 mb-4 md:grid-cols-3 md:grid md:gap-0 md:mb-0 md:mt-32">
+          <div className="col-span-2 b-12 md:mb-0">
+            {children}
+            <Link to="#first-section">
+              <ChevronCompactDown className="h-10 mt-10 ml-4 text-center text-white animate-bounce" />
+            </Link>
+          </div>
+          {/* TODO: I should add a fun glowing animation to this background it could look cool. */}
+          {/* TODO: Image is loaded with a weird background thing. */}
+          {/* <div className=""> */}
+          <StaticImage
+            src="../assets/code-camp-art.png"
+            className="w-full col-span-1 place-self-center justify-self-end"
+            imgStyle={{ objectFit: "contain" }}
+            alt="Illustration of camp participants sitting around a fire where the logs are made using code tags."
+          />
+          {/* </div> */}
+        </div>
+      </div>
+      <Banner />
     </div>
     {/* TODO: Should be visible from first page. */}
-    {/* TODO: should be easy to edit */}
-    <div className="w-full py-2 text-center text-white bg-gray-900 font-extralight">
-      PROGRAMS OPEN FOR APPLICATIONS NOW
-    </div>
   </section>
 )
 

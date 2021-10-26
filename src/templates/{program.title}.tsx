@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
-import { Footer, LightHeader } from "../components/layout"
+import { Footer, Header } from "../components/layout"
 
 const Template: React.FunctionComponent<PageProps> = ({
   data, // this prop will be injected by the GraphQL query below.
@@ -12,7 +12,7 @@ const Template: React.FunctionComponent<PageProps> = ({
   const { frontmatter, html } = markdownRemark
   return (
     <div>
-      <LightHeader />
+      <Header bg="light" />
       <div>
         <h1>{frontmatter.title}</h1>
         <div className="prose" dangerouslySetInnerHTML={{ __html: html }} />
