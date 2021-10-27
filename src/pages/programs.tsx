@@ -206,7 +206,7 @@ const ProgramsPage: React.FunctionComponent<PageProps> = ({ data }) => {
             Can’t wait to learn? Learn now with the past program materials
             below.
           </p>
-          <div className="flex flex-wrap items-stretch gap-4">
+          <div className="flex flex-wrap items-stretch justify-center gap-4">
             {(
               data as { allMarkdownRemark: { nodes: Array<Program> } }
             ).allMarkdownRemark.nodes

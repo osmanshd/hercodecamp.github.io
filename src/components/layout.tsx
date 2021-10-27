@@ -118,7 +118,7 @@ export const Hero: React.FunctionComponent = ({ children }) => (
           <div className="col-span-2 b-12 md:mb-0">
             {children}
             <Link to="#first-section">
-              <ChevronCompactDown className="h-10 mt-10 ml-4 text-center text-white animate-bounce" />
+              <ChevronCompactDown className="h-10 mt-10 text-center text-white animate-bounce" />
             </Link>
           </div>
           {/* TODO: I should add a fun glowing animation to this background it could look cool. */}

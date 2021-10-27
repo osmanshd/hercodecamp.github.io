@@ -189,7 +189,7 @@ We are currently looking for advisors to help grow our organization. This positi
       <h2 className="mb-10 text-4xl font-bold text-center uppercase text-iris font-body">
         Opportunities
       </h2>
-      <div className="flex flex-wrap items-center justify-center gap-8 flex-flow sm:mx-auto ">
+      <div className="flex flex-wrap items-stretch justify-center gap-8 flex-flow sm:mx-auto">
         {opportunities.map(({ title, blurb }, i) => (
           <div
             onClick={() => setSelectedOpportunity(i)}
