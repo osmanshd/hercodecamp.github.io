@@ -26,7 +26,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ data }) => (
       </p>
       <div>
         <div className="grid grid-cols-1 gap-2 md:block">
-          <Link className="mr-2" to="/register">
+          <Link className="mr-2" to="/programs">
             <TransparentLinkButton>Register</TransparentLinkButton>
           </Link>
           <Link to="/get-involved">
@@ -159,7 +159,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ data }) => (
               Register for an upcoming program or start learning today at zero
               cost.
             </p>
-            <Link className="mt-auto" to="/subscribe">
+            <Link className="mt-auto" to="/programs">
               <IcterineLinkButton>Register</IcterineLinkButton>
             </Link>
           </div>
@@ -193,7 +193,6 @@ export const MailingListSection: React.FunctionComponent = () => (
           Join our quarterly newsletter to keep up with news, volunteer
           opportunities, and upcoming events.
         </p>
-        {/* TODO: */}
         <Link to="https://hercodecamp.us19.list-manage.com/subscribe?u=c27169d8995f9d493daf82c16&id=4169a6682f">
           <IcterineLinkButton> Subscribe</IcterineLinkButton>
         </Link>

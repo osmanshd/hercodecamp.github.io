@@ -9,6 +9,7 @@ import { IrisLinkButton } from "../components/LinkButton"
 import { MailingListSection } from "."
 import { kebabCase } from "lodash"
 import { format } from "date-fns"
+import { StaticImage } from "gatsby-plugin-image"
 
 const ProgramsPage: React.FunctionComponent<PageProps> = ({ data }) => {
   return (
@@ -85,7 +86,10 @@ const ProgramsPage: React.FunctionComponent<PageProps> = ({ data }) => {
           </p>
           <div className="grid gap-10 md:grid-cols-8">
             <div className="w-full h-full col-span-3 bg-white shadow-black ">
-              {/* TODO: add image */}
+              <StaticImage
+                src="../assets/programs-rotman-flyer.png"
+                alt="Rotman Coding Challenge Flyer"
+              />
             </div>
             <div className="col-span-5">
               <h3 className="flex flex-wrap items-center text-2xl font-bold gap-x-4 font-body">
@@ -141,8 +145,7 @@ const ProgramsPage: React.FunctionComponent<PageProps> = ({ data }) => {
               <li>Applications Open: March 2022 </li>
               <li> Application Deadline: July 2022</li>
             </ul>
-            <Link to="/apply">
-              {/* TODO: get the link right */}
+            <Link to="https://hercodecamp.us19.list-manage.com/subscribe?u=c27169d8995f9d493daf82c16&id=4169a6682f">
               <IrisLinkButton>Keep me in the loop</IrisLinkButton>
             </Link>
           </div>
@@ -167,7 +170,10 @@ const ProgramsPage: React.FunctionComponent<PageProps> = ({ data }) => {
           </div>
           <div className="grid grid-cols-1 gap-10 md:grid-cols-8">
             <div className="w-full h-full col-span-3 bg-white shadow-black">
-              {/* TODO: add image */}
+              <StaticImage
+                src="../assets/programs-coder.JPG"
+                alt="Coder's Camp Coding Workshop"
+              />
             </div>
             <div className="col-span-5">
               <h3 className="flex flex-wrap items-center text-2xl font-bold gap-x-4">
@@ -183,13 +189,13 @@ const ProgramsPage: React.FunctionComponent<PageProps> = ({ data }) => {
               </p>
               <div>Important Dates:</div>
               <ul className="mb-4 list-disc list-inside">
-                <li>November 15, 2021 - Application Deadline</li>
-                <li>December 1, 2021 - Zoom Kick-Off & Video Launch</li>
-                <li>December 8, 2021 - Zoom Meet Up & Idea Exchange</li>
+                <li>November 15, 2021 - Application Open</li>
+                <li>December 1, 2021 - Video Launch</li>
+                <li>December 15, 2021 - Zoom Meet Up & Idea Exchange</li>
               </ul>
-              <Link to="/apply">
+              {/* <Link to="/apply">
                 <IrisLinkButton>Apply Now</IrisLinkButton>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

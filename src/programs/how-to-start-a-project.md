@@ -5,7 +5,7 @@ title: "Byte-sized: How to start a project"
 creators:
   - ???
 blurb: Ever wanted to start coding, but don't know where to begin?
-date: 2021-12-01
+date: 2021-12-15
 slug: start-a-project
 ---
 
