@@ -140,22 +140,114 @@ const AboutUsPage: React.FunctionComponent<PageProps> = () => (
             {
               name: "Joanna Pineda",
               positions: ["Founder", "CEO"],
-              bio: `Joanna is a driving force behind any project she is a part of. She holds a research oriented inter-disciplinary masters degree from one of the top universities in Canada and works as a professional developer.`,
+              bio: `Joanna is currently a Technology Analyst at Accenture where she works primarily as a software developer to improve businesses. Prior to her time in industry, she worked in the intersection of Computer Science and Biology through research in cancer genomics and health care.`,
               image: (
                 <StaticImage
-                  src="../assets/people/joanna-pineda.jpg"
+                  src="../assets/people/Joanna_Pineda.png"
                   alt="Joanna Pineda"
                 />
               ),
               socials: {
-                // Whatever socials you want here.
-                twitter: "",
-                linkedin: "",
+                twitter: "https://twitter.com/JoannaDPineda",
+                linkedin: "https://www.linkedin.com/in/joannadpineda/",
+              },
+            },
+            {
+              name: "Chantal Shaib",
+              positions: ["Chief Strategy Officer", "Chief Learning Officer"],
+              bio: `Chantal is a Ph.D. student in Computer Science at Northeastern University, where she spends her days thinking about how to use technology to model and understand biomedical data. Through HER CODE CAMP, Chantal hopes to push for diversity by providing accessible and inclusive spaces for students to get excited by technology.`,
+              image: (
+                <StaticImage
+                  src="../assets/people/Chantal_Shaib.png"
+                  alt="Chantal Shaib"
+                />
+              ),
+              socials: {
+                linkedin: "https://www.linkedin.com/in/chantal-s-088b24109/",
+              },
+            },
+            {
+              name: "Armande Ang Houle",
+              positions: ["Chief Operations Officer", "Treasurer"],
+              bio: `Armande is currently a data project coordinator at Genentech where she facilitates the use of genomic data for cancer biomarkers. Prior to her current role, Armande researched cancer transcriptomic and genomic evolution using computational approaches.`,
+              image: (
+                <StaticImage
+                  src="../assets/people/Armande_Ang_Houle.png"
+                  alt="Armande Ang Houle"
+                />
+              ),
+              socials: {
+                twitter: "https://twitter.com/armandeanghoule?lang=en",
+                linkedin:
+                  "https://www.linkedin.com/in/armande-ang-houle-95138687",
+              },
+            },
+            {
+              name: "Elyssa Bader",
+              positions: ["Chief Operations Officer", "Chief Strategy Officer"],
+              bio: `Elyssa Bader is a Ph.D. student in Molecular Genetics at the University of Toronto researching the effects of aging on immune cells. Through her work with HCC, Elyssa hopes to provide an inclusive community for students who are curious about computer science.`,
+              image: (
+                <StaticImage
+                  src="../assets/people/Elyssa_Bader.png"
+                  alt="Elyssa Bader"
+                />
+              ),
+              socials: {
+                twitter: "https://twitter.com/ElyssaBader",
+                linkedin: "https://www.linkedin.com/in/elyssabader/",
+              },
+            },
+            {
+              name: "Sabrina Abbott",
+              positions: ["Chief Communications Officer", "Secretary"],
+              bio: `Sabrina is a Humanities Lesson Writer for Study.com by day and a freelance artist by night; she is currently earning her certification to be an English as a Second Language teacher. She plans on completing Teacher's College and her M.Ed soon after. `,
+              image: (
+                <StaticImage
+                  src="../assets/people/Sabrina_Abbott.png"
+                  alt="Sabrina Abbott"
+                />
+              ),
+              socials: {
+                linkedin: "https://www.linkedin.com/in/sabrinamabbott/",
+              },
+            },
+            {
+              name: "Seungeun Yi",
+              positions: ["Chief Learning Officer"],
+              bio: `Seungeun is a Machine Learning Scientist at Layer 6 AI, where she works on building data-driven solutions for TD Bank and does research in healthcare to improve patient care. Seungeun is committed to creating easy-to-access and diverse content for all students interested in tech.`,
+              image: (
+                <StaticImage
+                  src="../assets/people/Seungeun_Yi.png"
+                  alt="Seungeun Yi"
+                />
+              ),
+              socials: {
+                linkedin: "https://www.linkedin.com/in/seungeunyi/",
+              },
+            },
+            {
+              name: "Marta Skreta",
+              positions: ["Chief Learning Officer"],
+              bio: `Marta is a Computer Science PhD student at the University of Toronto, where she is uses Machine Learning to design self-driving labs and discover new materials. Marta hopes that through HER CODE CAMP, she can help students use computer science to solve problems they are passionate about.`,
+              image: (
+                <StaticImage
+                  src="../assets/people/Marta_Skreta.png"
+                  alt="Marta Skreta"
+                />
+              ),
+              socials: {
+                twitter: "https://twitter.com/martoskreto",
+                linkedin: "https://www.linkedin.com/in/martaskreta/",
               },
             },
           ].map(({ image, name, positions, bio, socials }) => (
             <div className="grid-cols-8 gap-4 md:grid font-body">
-              {image}
+              <div className="col-span-3 ">
+                <div className="relative">
+                  <div className="absolute bottom-0 left-0 right-0 bg-icterine aspect-w-1 aspect-h-1" />
+                  {image}
+                </div>
+              </div>
               <div className="col-span-5">
                 <h3 className="text-lg font-bold">{name}</h3>
                 <div className="mb-2">
