@@ -1,6 +1,6 @@
 module.exports = {
   // TODO: remove me.
-  pathPrefix: "/hercodecamp.com",
+  // pathPrefix: "/hercodecamp.com",
   // TODO: Fill this out.
   siteMetadata: {
     title: `Gatsby Default Starter`,
