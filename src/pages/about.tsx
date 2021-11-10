@@ -244,7 +244,7 @@ const AboutUsPage: React.FunctionComponent<PageProps> = () => (
             <div className="grid-cols-8 gap-4 md:grid font-body">
               <div className="col-span-3 ">
                 <div className="relative">
-                  <div className="absolute bottom-0 left-0 right-0 bg-icterine aspect-w-1 aspect-h-1" />
+                  <div className="absolute bottom-0 left-0 right-0 bg-icterine aspect-w-10 aspect-h-8" />
                   {image}
                 </div>
               </div>
