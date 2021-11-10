@@ -43,7 +43,7 @@ const VolunteerPage: React.FunctionComponent<PageProps> = () => (
             designer, developer, or are just interested in diversifying tech,
             get in touch! There’s always space for more help.
           </p>
-          <Link to="/get-involved">
+          <Link to="https://forms.gle/KX1E63mtbGcvxQNG7">
             <IrisLinkButton>Volunteer</IrisLinkButton>
           </Link>
         </div>
@@ -117,7 +117,7 @@ const OpportunityComponent: React.FunctionComponent<
         </ReactMarkdown>
 
         <div className="text-center">
-          <Link to="/get-involved">
+          <Link to="https://forms.gle/KX1E63mtbGcvxQNG7">
             <IcterineLinkButton>Volunteer</IcterineLinkButton>
           </Link>
         </div>
