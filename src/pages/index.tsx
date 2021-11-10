@@ -16,7 +16,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ data }) => (
     {/* Might need a minimum height. */}
     <Helmet title="HER CODE CAMP" />
     <Hero>
-      <h1 className="mb-2 font-bold text-white uppercase text-7xl">
+      <h1 className="mb-2 text-5xl font-bold text-white uppercase md:text-7xl">
         Ready to hack the future?
       </h1>
       <p className="mb-4 text-xl text-white font-extralight font-body">
@@ -25,7 +25,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ data }) => (
         Toronto Area.
       </p>
       <div>
-        <div>
+        <div className="grid grid-cols-1 gap-2 md:block">
           <Link className="mr-2" to="/register">
             <TransparentLinkButton>Register</TransparentLinkButton>
           </Link>

@@ -11,9 +11,9 @@ const NotFoundPage: React.FunctionComponent<PageProps> = () => (
         <div className="self-stretch flex-1 mb-auto">
           <Header />
         </div>
-        <div className="flex flex-col justify-center w-full px-8 mx-auto text-left place-self-auto max-w-7xl">
+        <div className="flex flex-col justify-center w-full px-8 pt-10 mx-auto text-left md:pt-0 place-self-auto max-w-7xl">
           <div>
-            <h1 className="mb-2 font-bold text-white uppercase text-7xl">
+            <h1 className="mb-2 text-4xl font-bold text-white uppercase md:text-7xl">
               404: PAGE NOT FOUND 😟
             </h1>
             <p className="mb-4 text-xl text-white font-extralight font-body">

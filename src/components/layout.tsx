@@ -100,33 +100,30 @@ export const Header: React.FunctionComponent<{ bg?: "light" | "dark" }> = ({
 )
 
 export const Hero: React.FunctionComponent = ({ children }) => (
-  <section className="relative min-h-screen md:h-1 bg-gradient-to-r from-darkIris to-iris animate-text-in">
-    <div className="flex-col md:h-full md:flex ">
-      <div className="self-stretch pb-12">
-        <Header />
-      </div>
-      <div className="flex-1 px-8 pb-12 mx-auto max-w-7xl">
-        <div className="grid-cols-1 gap-8 pt-8 mb-4 md:grid-cols-3 md:grid md:gap-0 md:mb-0 lg:mt-32">
-          <div className="col-span-2 b-12 md:mb-0">
-            {children}
-            <Link to="#first-section">
-              <ChevronCompactDown className="h-10 mt-10 text-center text-white animate-bounce" />
-            </Link>
-          </div>
-          {/* TODO: I should add a fun glowing animation to this background it could look cool. */}
-          {/* TODO: Image is loaded with a weird background thing. */}
-          {/* <div className=""> */}
-          <StaticImage
-            src="../assets/code-camp-art.png"
-            className="w-full col-span-1 place-self-center justify-self-end"
-            imgStyle={{ objectFit: "contain" }}
-            alt="Illustration of camp participants sitting around a fire where the logs are made using code tags."
-          />
-          {/* </div> */}
-        </div>
-      </div>
-      <Banner />
+  <section className="flex-col min-h-screen bg-gradient-to-r from-darkIris to-iris animate-text-in md:h-full md:flex">
+    <div className="self-stretch pb-12">
+      <Header />
     </div>
+    <div className="flex-1 flex-grow px-8 pb-12 mx-auto max-w-7xl">
+      <div className="grid-cols-1 gap-8 pt-8 mb-4 md:grid-cols-3 md:grid md:gap-0 md:mb-0 lg:mt-32">
+        <div className="col-span-2 b-12 md:mb-0">
+          {children}
+          <Link to="#first-section">
+            <ChevronCompactDown className="h-10 mt-10 text-center text-white animate-bounce" />
+          </Link>
+        </div>
+        {/* TODO: I should add a fun glowing animation to this background it could look cool. */}
+        {/* TODO: Image is loaded with a weird background thing. */}
+        {/* <div className=""> */}
+        <StaticImage
+          src="../assets/code-camp-art.png"
+          className="w-full col-span-1 place-self-center justify-self-end"
+          imgStyle={{ objectFit: "contain" }}
+          alt="Illustration of camp participants sitting around a fire where the logs are made using code tags."
+        />
+      </div>
+    </div>
+    <Banner />
   </section>
 )
 
