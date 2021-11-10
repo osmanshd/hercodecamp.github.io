@@ -6,8 +6,6 @@ import Helmet from "react-helmet"
 import { easeSinOut } from "d3-ease"
 import { Linkedin, Twitter } from "@styled-icons/boxicons-logos"
 
-import joannaProfile from "../assets/people/joanna-pineda-square.jpg"
-
 const AboutUsPage: React.FunctionComponent<PageProps> = () => (
   <Layout>
     {/* Might need a minimum height. */}
@@ -143,40 +141,21 @@ const AboutUsPage: React.FunctionComponent<PageProps> = () => (
               name: "Joanna Pineda",
               positions: ["Founder", "CEO"],
               bio: `Joanna is a driving force behind any project she is a part of. She holds a research oriented inter-disciplinary masters degree from one of the top universities in Canada and works as a professional developer.`,
-              image: "../assets/people/joanna-pineda.jpg",
+              image: (
+                <StaticImage
+                  src="../assets/people/joanna-pineda.jpg"
+                  alt="Joanna Pineda"
+                />
+              ),
               socials: {
+                // Whatever socials you want here.
                 twitter: "",
                 linkedin: "",
-              } as { [key in Social]: string },
-            },
-            {
-              name: "Joanna Pineda",
-              positions: ["Founder", "CEO"],
-              bio: `Joanna is a driving force behind any project she is a part of. She holds a research oriented inter-disciplinary masters degree from one of the top universities in Canada and works as a professional developer.`,
-              image: "../assets/people/joanna-pineda.jpg",
-              socials: {
-                twitter: "",
-                linkedin: "",
-              } as { [key in Social]: string },
-            },
-            {
-              name: "Joanna Pineda",
-              positions: ["Founder", "CEO"],
-              bio: `Joanna is a driving force behind any project she is a part of. She holds a research oriented inter-disciplinary masters degree from one of the top universities in Canada and works as a professional developer.`,
-              image: "../assets/people/joanna-pineda.jpg",
-              socials: {
-                twitter: "",
-                linkedin: "",
-              } as { [key in Social]: string },
+              },
             },
           ].map(({ image, name, positions, bio, socials }) => (
             <div className="grid-cols-8 gap-4 md:grid font-body">
-              <img
-                className="w-1/2 col-span-3 mx-auto mb-4 rounded shadow md:w-auto md:mb-0 md:mx-0"
-                src={joannaProfile}
-                alt={`Headshot of ${name}`}
-              />
-              {/* {image || `../assets/people/${kebabCase(name.toLowerCase())}`} */}
+              {image}
               <div className="col-span-5">
                 <h3 className="text-lg font-bold">{name}</h3>
                 <div className="mb-2">

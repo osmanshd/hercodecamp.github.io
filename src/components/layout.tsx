@@ -10,7 +10,6 @@ import React from "react"
 import { Link } from "gatsby"
 import Logo from "../assets/logo-mark.inline.svg"
 import { StaticImage } from "gatsby-plugin-image"
-import Marquee from "react-easy-marquee"
 import {
   Github,
   Instagram,
@@ -22,16 +21,9 @@ import { ChevronCompactDown } from "@styled-icons/bootstrap"
 
 // TODO: add seo (helmet descriptions etc.)
 
+// TODO: should probably have header, footer, main stuff for the things.
 const Layout: React.FunctionComponent = ({ children }) => {
-  return (
-    <>
-      <div>
-        <header></header>
-        <main>{children}</main>
-        <footer></footer>
-      </div>
-    </>
-  )
+  return <main>{children}</main>
 }
 
 Layout.propTypes = {
@@ -43,7 +35,7 @@ export const Header: React.FunctionComponent<{ bg?: "light" | "dark" }> = ({
 }) => (
   <nav className="w-full px-8 pt-8 mx-auto max-w-7xl">
     <ul
-      className={`flex flex-wrap items-center justify-center gap-4  uppercase align-middle md:justify-end md:flex-nowrap whitespace-nowrap ${
+      className={`flex flex-wrap items-center justify-center gap-4  uppercase align-middle md:justify-end md:flex-nowrap whitespace-nowrap font-light font-body ${
         bg === "dark" ? "text-gray-200" : "text-gray-800"
       }`}
     >
@@ -58,7 +50,7 @@ export const Header: React.FunctionComponent<{ bg?: "light" | "dark" }> = ({
         >
           {/* TODO: add a fun glow effect to this one. */}
           <Logo className="text-left h-10 md:h-8 inline-block mt-[-5px]" />
-          <span className="ml-2 text-2xl font-black uppercase md:text-xl ">
+          <span className="ml-2 font-sans text-2xl font-black uppercase md:text-xl ">
             HER CODE CAMP
           </span>
         </Link>
@@ -88,7 +80,7 @@ export const Header: React.FunctionComponent<{ bg?: "light" | "dark" }> = ({
           className={`${
             bg === "dark" ? "hover:text-icterine" : "hover:text-iris"
           }`}
-          to="/volunteer"
+          to="/get-involved"
         >
           Get Involved
         </Link>
@@ -140,7 +132,7 @@ export const Hero: React.FunctionComponent = ({ children }) => (
 
 export const Footer = () => (
   <section className="bg-gray-800 py-14">
-    <h2 className="mb-4 text-4xl text-center text-white font-body">Sponsors</h2>
+    <h2 className="mb-4 text-2xl text-center text-white font-body">Sponsors</h2>
     <div className="flex flex-wrap items-center justify-center gap-8 px-8 mt-8 mb-12 md:px-0">
       <a
         href="https://www.thecodinghive.com/"

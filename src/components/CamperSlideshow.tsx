@@ -6,7 +6,7 @@ import spongeBobGif from "../assets/projects-spongebob-food-rush.gif"
 
 const CampersSlideshow: React.FunctionComponent<{
   interval?: number
-}> = ({ children, interval = 5000 }) => {
+}> = ({ children, interval = 7000 }) => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const maxLength = Array.isArray(children) ? children.length : 1
 

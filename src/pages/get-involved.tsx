@@ -12,7 +12,7 @@ import { X, PlusLg } from "@styled-icons/bootstrap"
 const VolunteerPage: React.FunctionComponent<PageProps> = () => (
   <Layout>
     {/* Might need a minimum height. */}
-    <Helmet title="Volunteer – HER CODE CAMP" />
+    <Helmet title="Get Involved – HER CODE CAMP" />
     <Hero>
       <h1 className="mb-2 font-bold text-white uppercase text-7xl">
         Get Involved
@@ -43,8 +43,7 @@ const VolunteerPage: React.FunctionComponent<PageProps> = () => (
             designer, developer, or are just interested in diversifying tech,
             get in touch! There’s always space for more help.
           </p>
-          {/* TODO: need to link properly */}
-          <Link to="/subscribe">
+          <Link to="/get-involved">
             <IrisLinkButton>Volunteer</IrisLinkButton>
           </Link>
         </div>
@@ -117,9 +116,10 @@ const OpportunityComponent: React.FunctionComponent<
           {description}
         </ReactMarkdown>
 
-        {/* TODO: link properly */}
         <div className="text-center">
-          <IcterineLinkButton>Volunteer</IcterineLinkButton>
+          <Link to="/get-involved">
+            <IcterineLinkButton>Volunteer</IcterineLinkButton>
+          </Link>
         </div>
       </div>
     </div>

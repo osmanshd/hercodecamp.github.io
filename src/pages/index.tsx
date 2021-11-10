@@ -151,7 +151,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ data }) => (
     <section className="bg-icterine">
       <div className="max-w-5xl px-8 py-24 mx-auto md:px-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-20">
-          <div className="px-10 pt-20 pb-12 text-center bg-white rounded shadow-xl">
+          <div className="flex flex-col px-10 pt-20 pb-12 text-center bg-white rounded shadow-xl">
             {/* <StaticImage alt="Emoji style image of woman using computer." /> */}
             <p className="mb-8 text-9xl">👩🏽‍💻</p>
             <h3 className="mb-4 text-xl font-bold uppercase">Learn</h3>
@@ -159,11 +159,11 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ data }) => (
               Register for an upcoming program or start learning today at zero
               cost.
             </p>
-            <Link to="/subscribe">
+            <Link className="mt-auto" to="/subscribe">
               <IcterineLinkButton>Register</IcterineLinkButton>
             </Link>
           </div>
-          <div className="px-10 pt-20 pb-12 text-center bg-white rounded shadow-lg font-body">
+          <div className="flex flex-col px-10 pt-20 pb-12 text-center bg-white rounded shadow-lg font-body">
             {/* <StaticImage alt="Emoji style image of woman using computer." /> */}
             <p className="mb-8 text-9xl">🤗</p>
             <h3 className="mb-4 text-xl font-bold uppercase font-body">
@@ -172,7 +172,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ data }) => (
             <p className="mb-8 text-xl font-light font-body">
               Join the team as a volunteer, staff, partner, or advisor.
             </p>
-            <Link to="/subscribe">
+            <Link className="mt-auto" to="/get-involved">
               <IcterineLinkButton>Get Involved</IcterineLinkButton>
             </Link>
           </div>

@@ -53,8 +53,11 @@ const ProgramsPage: React.FunctionComponent<PageProps> = ({ data }) => {
                 body: "Short 1-2 hour workshops on skills to add to your toolbox",
               },
             ].map(({ icon, title, body }) => (
-              <Link className="mb-3" to={`#${kebabCase(title.toLowerCase())}`}>
-                <div className="px-2 py-16 text-center bg-gray-200 rounded hover:bg-gray-300 hover:drop-shadow-xl hover:!text-black">
+              <Link
+                className="h-full mb-3"
+                to={`#${kebabCase(title.toLowerCase())}`}
+              >
+                <div className="h-full px-2 py-16 text-center bg-gray-200 rounded hover:bg-gray-300 hover:drop-shadow-xl hover:!text-black">
                   <div className="mb-3 text-5xl">{icon}</div>
                   <h3 className="mb-2 text-xl font-bold uppercase">{title}</h3>
                   <p className="text-lg font-light font-body">{body}</p>
@@ -81,11 +84,11 @@ const ProgramsPage: React.FunctionComponent<PageProps> = ({ data }) => {
             and videos.
           </p>
           <div className="grid gap-10 md:grid-cols-8">
-            <div className="w-full h-full col-span-3 bg-white shadow-black">
+            <div className="w-full h-full col-span-3 bg-white shadow-black ">
               {/* TODO: add image */}
             </div>
             <div className="col-span-5">
-              <h3 className="flex flex-wrap items-center text-2xl font-bold gap-x-4">
+              <h3 className="flex flex-wrap items-center text-2xl font-bold gap-x-4 font-body">
                 Coding Challenge 2022
                 <span className="py-1 pl-3 pr-4 text-sm font-light text-white rounded-full bg-gradient-to-r from-darkIris to-iris">
                   <span className="mr-1">🔔</span> Upcoming Event
@@ -237,7 +240,7 @@ export const UpcomingProgramsSection: React.FunctionComponent<{
         For beginners with little to no coding experience. Oh, and they’re all
         free.
       </p>
-      <div className="flex flex-wrap items-stretch justify-center gap-4">
+      <div className="grid items-stretch justify-center gap-4 lg:flex lg:flex-wrap">
         {programs
           .filter(
             ({ frontmatter: { date } }) => date && new Date(date) > new Date()
