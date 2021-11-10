@@ -250,7 +250,16 @@ export const Footer = () => (
         <Instagram className="h-full" />
       </a>
     </div>
-    <p className="text-center text-gray-400">© 2021 HER CODE CAMP</p>
+    <p className="mb-6 text-center text-gray-400">© 2021 HER CODE CAMP</p>
+    <p className="text-sm font-light text-center ">
+      <span className="mr-1 text-gray-600 font-body">built by</span>
+      <a
+        className="font-mono font-normal text-opacity-80 text-icterine"
+        href="https://blainelewis.ca"
+      >
+        Blaine Lewis
+      </a>
+    </p>
   </section>
 )
 
