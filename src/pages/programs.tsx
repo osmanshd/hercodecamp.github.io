@@ -106,7 +106,7 @@ const ProgramsPage: React.FunctionComponent<PageProps> = ({ data }) => {
                 <li>January 30, 2022 - Applications Closed</li>
                 <li>February 15, 2022 - Kick Off Event</li>
               </ul>
-              <Link to="/apply">
+              <Link to="https://docs.google.com/forms/d/e/1FAIpQLScB6ndcdyccujte41dOWEawCe7pLPBSyjM8Mo2IZsC6f59a1Q/viewform">
                 <IrisLinkButton>Apply Now</IrisLinkButton>
               </Link>
             </div>

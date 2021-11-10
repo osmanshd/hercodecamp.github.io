@@ -194,7 +194,7 @@ export const MailingListSection: React.FunctionComponent = () => (
           opportunities, and upcoming events.
         </p>
         {/* TODO: */}
-        <Link to="/subscribe">
+        <Link to="https://hercodecamp.us19.list-manage.com/subscribe?u=c27169d8995f9d493daf82c16&id=4169a6682f">
           <IcterineLinkButton> Subscribe</IcterineLinkButton>
         </Link>
       </div>
