@@ -1,24 +1,32 @@
 ---
 tags:
   - 🧩 Byte-sized Series
-title: "Byte-sized: How to start a project"
+title: "Byte-sized: How to start a coding project"
 creators:
-  - ???
+  - Seung Eun Yi
 blurb: Ever wanted to start coding, but don't know where to begin?
 date: 2021-12-15
 slug: start-a-project
+app_link: "https://forms.gle/yjS78Kh2BzcEQwpXA"
 ---
+
+![poster](/programs-how-to-start-a-coding-project.png "Title")
 
 ### OVERVIEW
 
 #### Description
 
-Learn popular tools used for machine learning
+Have you ever thought of working on a coding project to build your skill set, but never knew where to start?  Are you looking for teammates to work together on a cool project idea? Just want to come and hang out with us? This series is perfect for you!
+
+Byte-Sized Series consists of quarterly short videos (<5 minutes) and workshops to learn how to start a coding project, share your ideas, and work on a project of your own! 
 
 #### Goal
 
-Introduce a few basic Python libraries
+In this video, we will:
+* give you tips and tricks on how to start a project in tech
+* walk you through finding a project idea
+* introduce you to scoping a project
 
 #### Pre-requisites
 
-Introduce a few basic Python libraries
+* no coding experience required

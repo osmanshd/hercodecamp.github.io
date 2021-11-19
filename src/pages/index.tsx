@@ -211,6 +211,7 @@ export const pageQuery = graphql`
           blurb
           date
           slug
+          app_link
         }
       }
     }
