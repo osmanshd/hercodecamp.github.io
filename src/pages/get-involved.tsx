@@ -68,9 +68,9 @@ const VolunteerPage: React.FunctionComponent<PageProps> = () => (
             <li>Workshop materials (laptops, cloud credits, etc.)</li>
           </ul>
         </div>
-        {/* TODO: link */}
-
-        <IrisLinkButton>Let's Chat</IrisLinkButton>
+        <Link to="mailto:info@hercodecamp.com">
+          <IrisLinkButton>Let's Chat</IrisLinkButton>
+        </Link>
       </div>
     </section>
     <MailingListSection />

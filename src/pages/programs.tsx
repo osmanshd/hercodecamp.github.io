@@ -9,6 +9,7 @@ import { IrisLinkButton } from "../components/LinkButton"
 import { MailingListSection } from "."
 import { kebabCase } from "lodash"
 import { format } from "date-fns"
+import { StaticImage } from "gatsby-plugin-image"
 
 const ProgramsPage: React.FunctionComponent<PageProps> = ({ data }) => {
   return (
@@ -85,7 +86,10 @@ const ProgramsPage: React.FunctionComponent<PageProps> = ({ data }) => {
           </p>
           <div className="grid gap-10 md:grid-cols-8">
             <div className="w-full h-full col-span-3 bg-white shadow-black ">
-              {/* TODO: add image */}
+              <StaticImage
+                src="../assets/programs-rotman-flyer.png"
+                alt="Rotman Coding Challenge Flyer"
+              />
             </div>
             <div className="col-span-5">
               <h3 className="flex flex-wrap items-center text-2xl font-bold gap-x-4 font-body">
@@ -141,8 +145,7 @@ const ProgramsPage: React.FunctionComponent<PageProps> = ({ data }) => {
               <li>Applications Open: March 2022 </li>
               <li> Application Deadline: July 2022</li>
             </ul>
-            <Link to="/apply">
-              {/* TODO: get the link right */}
+            <Link to="https://hercodecamp.us19.list-manage.com/subscribe?u=c27169d8995f9d493daf82c16&id=4169a6682f">
               <IrisLinkButton>Keep me in the loop</IrisLinkButton>
             </Link>
           </div>
@@ -167,27 +170,30 @@ const ProgramsPage: React.FunctionComponent<PageProps> = ({ data }) => {
           </div>
           <div className="grid grid-cols-1 gap-10 md:grid-cols-8">
             <div className="w-full h-full col-span-3 bg-white shadow-black">
-              {/* TODO: add image */}
+              <StaticImage
+                src="../assets/programs-coder.JPG"
+                alt="Coder's Camp Coding Workshop"
+              />
             </div>
-            <div className="col-span-5">
-              <h3 className="flex flex-wrap items-center text-2xl font-bold gap-x-4">
+            <div className="col-span-5 font-body">
+              <h3 className="flex flex-wrap items-center text-2xl font-body font-bold gap-x-4">
                 How to start a project!
                 <span className="py-1 pl-3 pr-4 text-sm font-light text-white rounded-full bg-gradient-to-r from-darkIris to-iris">
                   <span className="mr-1">🔔</span> Upcoming Event
                 </span>
               </h3>
 
-              <p className="font-light">
+              <p className="font-light ">
                 Want to start a project but don’t know where to start? Join us
                 for our first byte-sized event.
               </p>
               <div>Important Dates:</div>
               <ul className="mb-4 list-disc list-inside">
-                <li>November 15, 2021 - Application Deadline</li>
-                <li>December 1, 2021 - Zoom Kick-Off & Video Launch</li>
-                <li>December 8, 2021 - Zoom Meet Up & Idea Exchange</li>
+                <li>November 15, 2021 - Application Open</li>
+                <li>December 1, 2021 - Video Launch</li>
+                <li>December 15, 2021 - Zoom Meet Up & Idea Exchange</li>
               </ul>
-              <Link to="/apply">
+              <Link to="https://forms.gle/yjS78Kh2BzcEQwpXA">
                 <IrisLinkButton>Apply Now</IrisLinkButton>
               </Link>
             </div>
@@ -250,7 +256,7 @@ export const UpcomingProgramsSection: React.FunctionComponent<{
           ))}
       </div>
       {withMore ? (
-        <div className="mt-10 text-lg font-bold uppercase font--body text-iris">
+        <div className="mt-10 text-lg font-bold uppercase font-body text-iris">
           <Link to="/programs" className="hover:underline hover:text-black">
             More {">"}
           </Link>
@@ -268,12 +274,13 @@ export interface Program {
     tags?: Array<string>
     date?: Date
     slug?: string
+    app_link?: string
   }
   html: string
 }
 
 const ProgramCard: React.FunctionComponent<Program> = ({
-  frontmatter: { title, date, blurb, slug, tags },
+  frontmatter: { title, date, blurb, slug, tags, app_link },
 }) => {
   // TODO: there is a bit of an edge case here, it is upcomong if it hasn't happened but idk what happens if applications are closed? or what time the event happens at.
 
@@ -291,10 +298,10 @@ const ProgramCard: React.FunctionComponent<Program> = ({
         <div className="font-medium">{title}</div>
         {date ? <div>{format(parsedDate, "MMMM do, yyyy")}</div> : null}
         <p className="mb-5 font-light">{blurb}</p>
-        {new Date() < parsedDate ? (
-          <div className="mt-auto text-center">
-            <Link to="/apply">
-              <IrisLinkButton>Apply Now</IrisLinkButton>
+        {app_link ? (
+          <div className="mt-auto text-left text-xs">
+            <Link to={`/programs/${slug}`}>
+              Read more >
             </Link>
           </div>
         ) : null}
@@ -343,6 +350,7 @@ export const pageQuery = graphql`
           blurb
           date
           slug
+          app_link
         }
       }
     }

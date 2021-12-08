@@ -7,7 +7,7 @@ import { Tag, Program } from "../programs"
 const Template: React.FunctionComponent<PageProps> = ({ data }) => {
   const { markdownRemark } = data as { markdownRemark: Program }
   const {
-    frontmatter: { tags, creators, title },
+    frontmatter: { tags, creators, title, app_link },
     html,
   } = markdownRemark
   return (
@@ -35,10 +35,15 @@ const Template: React.FunctionComponent<PageProps> = ({ data }) => {
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </div>
-        <Link to="/programs">
-          <IcterineLinkButton className="w-full">
-            View More Programs
-          </IcterineLinkButton>
+        {app_link && (
+          <Link to={app_link}>
+            <IcterineLinkButton >
+              Apply Now
+            </IcterineLinkButton>
+          </Link>
+        )}
+        <Link to="/programs" className="float-right font-body">
+          View More Programs >
         </Link>
       </div>
       <Footer />
@@ -54,6 +59,7 @@ export const pageQuery = graphql`
         title
         tags
         creators
+        app_link
       }
     }
   }
