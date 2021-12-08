@@ -29,10 +29,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
         // The property ID; the tracking code won't be generated without it
-        trackingId: "G-KFTY3TTPVV",
+        trackingIds: ["G-KFTY3TTPVV"],
       },
     },
     {
