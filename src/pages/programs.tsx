@@ -93,7 +93,7 @@ const ProgramsPage: React.FunctionComponent<PageProps> = ({ data }) => {
             </div>
             <div className="col-span-5">
               <h3 className="flex flex-wrap items-center text-2xl font-bold gap-x-4 font-body">
-                Coding Challenge 2022
+                High School Applied Coding Challenge 2022
                 <span className="py-1 pl-3 pr-4 text-sm font-light text-white rounded-full bg-gradient-to-r from-darkIris to-iris">
                   <span className="mr-1">🔔</span> Upcoming Event
                 </span>
@@ -106,12 +106,12 @@ const ProgramsPage: React.FunctionComponent<PageProps> = ({ data }) => {
               </p>
               <div>Important Dates:</div>
               <ul className="mb-4 list-disc list-inside">
-                <li>October 15, 2021 - Applications Open</li>
-                <li>January 30, 2022 - Applications Closed</li>
-                <li>February 15, 2022 - Kick Off Event</li>
+                <li>Practice Session no.1: Wednesday, February 2nd, 2022 4:00 PM – 5:30 PM EDT</li>
+                <li>Practice Session no.2: Wednesday, January 26th, 2022 4:00 PM – 5:30 PM EDT</li>
+                <li>Competition Day: Saturday, February 5th, 2022 9:00 AM - 1:00 PM EDT</li>
               </ul>
-              <Link to="https://docs.google.com/forms/d/e/1FAIpQLScB6ndcdyccujte41dOWEawCe7pLPBSyjM8Mo2IZsC6f59a1Q/viewform">
-                <IrisLinkButton>Apply Now</IrisLinkButton>
+              <Link to="https://financelab.rotman.utoronto.ca/news.asp?name=2021-10-21_High%20School%20Applied%20Coding%20Challenge%202022">
+                <IrisLinkButton>Learn more</IrisLinkButton>
               </Link>
             </div>
           </div>
@@ -177,24 +177,17 @@ const ProgramsPage: React.FunctionComponent<PageProps> = ({ data }) => {
             </div>
             <div className="col-span-5 font-body">
               <h3 className="flex flex-wrap items-center text-2xl font-body font-bold gap-x-4">
-                How to start a project!
+                How to start a coding project!
                 <span className="py-1 pl-3 pr-4 text-sm font-light text-white rounded-full bg-gradient-to-r from-darkIris to-iris">
-                  <span className="mr-1">🔔</span> Upcoming Event
+                  <span className="mr-1">📼</span> New video
                 </span>
               </h3>
 
-              <p className="font-light ">
-                Want to start a project but don’t know where to start? Join us
-                for our first byte-sized event.
+              <p className="font-light mb-8">
+                Want to start a project but don’t know where to start? We created a video with tips on how to get started!
               </p>
-              <div>Important Dates:</div>
-              <ul className="mb-4 list-disc list-inside">
-                <li>November 15, 2021 - Application Open</li>
-                <li>December 1, 2021 - Video Launch</li>
-                <li>December 15, 2021 - Zoom Meet Up & Idea Exchange</li>
-              </ul>
-              <Link to="https://forms.gle/yjS78Kh2BzcEQwpXA">
-                <IrisLinkButton>Apply Now</IrisLinkButton>
+              <Link to="/programs/start-a-project">
+                <IrisLinkButton>Learn more</IrisLinkButton>
               </Link>
             </div>
           </div>

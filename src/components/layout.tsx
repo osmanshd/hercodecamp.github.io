@@ -250,7 +250,7 @@ export const Footer = () => (
         <Instagram className="h-full" />
       </a>
     </div>
-    <p className="mb-6 font-mono text-center text-gray-400"><Link to="mailto:info@hercodecamp.com">Contact Us: info@hercodecamp.com</Link></p>
+    <p className="mb-6 font-mono text-center text-gray-400">Contact Us: info@hercodecamp.com</p>
     <p className="mb-6 font-mono text-center text-gray-400">© 2021 HER CODE CAMP</p>
     <p className="text-sm font-light text-center ">
       <span className="mr-1 text-gray-600 font-body">built by</span>

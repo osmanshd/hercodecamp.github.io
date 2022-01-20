@@ -5,12 +5,11 @@ title: "Byte-sized: How to start a coding project"
 creators:
   - Seung Eun Yi
 blurb: Ever wanted to start coding, but don't know where to begin?
-date: 2021-12-15
 slug: start-a-project
-app_link: "https://forms.gle/yjS78Kh2BzcEQwpXA"
+app_link: ""
 ---
 
-![poster](/programs-how-to-start-a-coding-project.png "Title")
+![poster](/programs-how-to-start-a-coding-project.png "how to start a coding project")
 
 ### OVERVIEW
 
@@ -30,3 +29,7 @@ In this video, we will:
 #### Pre-requisites
 
 * no coding experience required
+
+#### Watch now
+
+[Video](https://youtu.be/XiRc0hErGp8)

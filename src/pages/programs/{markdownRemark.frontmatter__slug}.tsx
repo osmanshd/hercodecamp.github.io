@@ -35,13 +35,13 @@ const Template: React.FunctionComponent<PageProps> = ({ data }) => {
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </div>
-        {app_link && (
+        {app_link ?
           <Link to={app_link}>
             <IcterineLinkButton >
               Apply Now
             </IcterineLinkButton>
           </Link>
-        )}
+        : null}
         <Link to="/programs" className="float-right font-body">
           View More Programs >
         </Link>

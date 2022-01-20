@@ -27,7 +27,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ data }) => (
       <div>
         <div className="grid grid-cols-1 gap-2 md:block">
           <Link className="mr-2" to="/programs">
-            <TransparentLinkButton>Register</TransparentLinkButton>
+            <TransparentLinkButton>Learn Now</TransparentLinkButton>
           </Link>
           <Link to="/get-involved">
             <TransparentLinkButton>Get Involved</TransparentLinkButton>
@@ -211,7 +211,6 @@ export const pageQuery = graphql`
           blurb
           date
           slug
-          app_link
         }
       }
     }
