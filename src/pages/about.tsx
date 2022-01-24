@@ -30,8 +30,7 @@ const AboutUsPage: React.FunctionComponent<PageProps> = () => (
             under-represented communities in technology. Since being founded in
             2018, we have been hosting a variety of programs targeted to high
             school students who identify as a woman and/or non-binary (including
-            cis and trans women) in lower income schools in the Greater Toronto
-            Area.
+            cis and trans women) in Canada.
           </div>
           <div>
             We understand how learning to code can be difficult, especially when
@@ -92,7 +91,7 @@ const AboutUsPage: React.FunctionComponent<PageProps> = () => (
             {
               duration: 3000 + Math.random() * 500 - 250,
               number: 314,
-              label: "girls learned to code",
+              label: "students",
             },
             {
               duration: 1800 + Math.random() * 500 - 250,

@@ -21,8 +21,7 @@ const IndexPage: React.FunctionComponent<PageProps> = ({ data }) => (
       </h1>
       <p className="mb-4 text-xl text-white font-extralight font-body">
         Join a <span className="underline">free</span> computer science
-        community for high school women and non-binary students in the Greater
-        Toronto Area.
+        community for high school women and non-binary students in Canada.
       </p>
       <div>
         <div className="grid grid-cols-1 gap-2 md:block">

@@ -180,6 +180,17 @@ export const Footer = () => (
           src="../assets/sponsor-uoft.png"
         />
       </a>
+      <a
+        href="https://www.freshbooks.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <StaticImage
+          height={75}
+          alt="Freshbooks"
+          src="../assets/sponsor-freshbooks.png"
+        />
+      </a>
     </div>
     {/* @ts-ignore */}
     {/* <Marquee pauseOnHover duration={20000} height={125}>
@@ -251,7 +262,7 @@ export const Footer = () => (
       </a>
     </div>
     <p className="mb-6 font-mono text-center text-gray-400">Contact Us: info@hercodecamp.com</p>
-    <p className="mb-6 font-mono text-center text-gray-400">© 2021 HER CODE CAMP</p>
+    <p className="mb-6 font-mono text-center text-gray-400">© 2022 HER CODE CAMP</p>
     <p className="text-sm font-light text-center ">
       <span className="mr-1 text-gray-600 font-body">built by</span>
       <a
