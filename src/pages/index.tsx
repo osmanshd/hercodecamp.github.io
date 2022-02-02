@@ -208,7 +208,7 @@ export const pageQuery = graphql`
           title
           tags
           blurb
-          date
+          date(formatString: "yyyy-MM-DD")
           slug
         }
       }
