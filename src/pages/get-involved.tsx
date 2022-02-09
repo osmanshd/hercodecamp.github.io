@@ -73,6 +73,32 @@ const VolunteerPage: React.FunctionComponent<PageProps> = () => (
         </Link>
       </div>
     </section>
+    <section className="px-8 py-40 bg-gray-800">
+      <div className="max-w-5xl mx-auto font-body">
+        <h2 className="mb-6 text-3xl font-bold uppercase text-icterine">
+          Ambassador Program
+        </h2>
+        <div className="text-lg font-light text-white">
+          <p>
+          Join the team for 2022! Apply now to be an ambassador on the HCC planning committee for 2022. We are looking for two ambassadors to help shape our 2022 programme. 
+          </p>
+          <ul className="mb-4 ml-2 list-disc list-inside">
+            <li>leading, planning, and managing our community building activities</li>
+            <li>planning coffee chat(s)</li>
+            <li>planning ice breakers for our events</li>
+            <li>attending the staff meetings</li>
+          </ul>
+          <p className="mb-5">
+          This role is what you make it. We're looking for ways to become a better, more accessible community and we would love to hear from you.
+          The time commitment is ~2hrs weekly.
+          </p>
+          <p className="font-semibold mb-5">Deadline to apply is February 9th</p>
+        </div>
+        <Link to="https://forms.gle/jv7JssaVfrG44zBWA">
+          <IcterineLinkButton>Apply Now</IcterineLinkButton>
+        </Link>
+      </div>
+    </section>
     <MailingListSection />
     <Footer />
   </Layout>

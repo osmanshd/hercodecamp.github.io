@@ -87,30 +87,26 @@ const ProgramsPage: React.FunctionComponent<PageProps> = ({ data }) => {
           <div className="grid gap-10 md:grid-cols-8">
             <div className="w-full h-full col-span-3 bg-white shadow-black ">
               <StaticImage
-                src="../assets/programs-rotman-flyer.png"
+                className="h-full"
+                src="../assets/programs-beginner-coding-camp.png"
                 alt="Rotman Coding Challenge Flyer"
               />
             </div>
             <div className="col-span-5">
               <h3 className="flex flex-wrap items-center text-2xl font-bold gap-x-4 font-body">
-                High School Applied Coding Challenge 2022
-                <span className="py-1 pl-3 pr-4 text-sm font-light text-white rounded-full bg-gradient-to-r from-darkIris to-iris">
-                  <span className="mr-1">🔔</span> Upcoming Event
-                </span>
+                Virtual Beginner Coding Camp
+                <Tag key={"2"} tag={"🔔 Upcoming Event"}/>
+                <Tag key={"1"} tag={"💻 Workshop"} />
               </h3>
-              <span className="font-bold">
-                In partnership with the Rotman-FRT lab
-              </span>
-              <p className="font-light">
-                Learn about coding in finance through this coding challenge
+              <p className="font-light my-3">
+                Learn the basics of coding through videos, live-coding sessions, collaboration, and daily office hours.
               </p>
-              <div>Important Dates:</div>
+              <div className="font-bold">Important Dates:</div>
               <ul className="mb-4 list-disc list-inside">
-                <li>Practice Session no.1: Wednesday, February 2nd, 2022 4:00 PM – 5:30 PM EDT</li>
-                <li>Practice Session no.2: Wednesday, January 26th, 2022 4:00 PM – 5:30 PM EDT</li>
-                <li>Competition Day: Saturday, February 5th, 2022 9:00 AM - 1:00 PM EDT</li>
+                <li>Applications Open: February 2nd, 2022</li>
+                <li>Application Deadline: March 6th, 2022</li>
               </ul>
-              <Link to="https://financelab.rotman.utoronto.ca/news.asp?name=2021-10-21_High%20School%20Applied%20Coding%20Challenge%202022">
+              <Link to="/programs/beginner-coding-camp">
                 <IrisLinkButton>Learn more</IrisLinkButton>
               </Link>
             </div>
@@ -143,7 +139,7 @@ const ProgramsPage: React.FunctionComponent<PageProps> = ({ data }) => {
             <div className="font-bold"> Important Dates:</div>
             <ul className="mb-4 list-disc list-inside">
               <li>Applications Open: March 2022 </li>
-              <li> Application Deadline: July 2022</li>
+              <li>Application Deadline: July 2022</li>
             </ul>
             <Link to="https://hercodecamp.us19.list-manage.com/subscribe?u=c27169d8995f9d493daf82c16&id=4169a6682f">
               <IrisLinkButton>Keep me in the loop</IrisLinkButton>
@@ -316,6 +312,8 @@ export const Tag: React.FunctionComponent<{ tag: string }> = ({ tag }) => {
           ? "bg-blue-600 "
           : tag === "🧩 Byte-sized Series"
           ? "bg-green-600"
+          : tag === "🔔 Upcoming Event" 
+          ? "bg-iris"
           : ""
       } font-mono text-white text-xs px-2 py-1 rounded-full font-extralight`}
     >

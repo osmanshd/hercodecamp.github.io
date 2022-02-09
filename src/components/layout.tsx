@@ -10,7 +10,6 @@ import React from "react"
 import { Link } from "gatsby"
 import Logo from "../assets/logo-mark.inline.svg"
 import { StaticImage } from "gatsby-plugin-image"
-import codeGIF from "../assets/code-camp-art-final.gif"
 import {
   Github,
   Instagram,
@@ -116,8 +115,8 @@ export const Hero: React.FunctionComponent = ({ children }) => (
         {/* TODO: I should add a fun glowing animation to this background it could look cool. */}
         {/* TODO: Image is loaded with a weird background thing. */}
         {/* <div className=""> */}
-        <img
-          src={codeGIF}
+        <StaticImage
+          src="../assets/code-camp-art.png"
           className="w-full col-span-1 place-self-center justify-self-end"
           alt="Illustration of camp participants sitting around a fire where the logs are made using code tags."
         />
