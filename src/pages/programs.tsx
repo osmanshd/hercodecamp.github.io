@@ -8,8 +8,8 @@ import colorChangingPongGif from "../assets/projects-colorchanging-pong.gif"
 import { IrisLinkButton } from "../components/LinkButton"
 import { MailingListSection } from "."
 import { kebabCase } from "lodash"
-import { format } from "date-fns"
 import { StaticImage } from "gatsby-plugin-image"
+import { format, parse } from "date-fns"
 
 const ProgramsPage: React.FunctionComponent<PageProps> = ({ data }) => {
   return (
@@ -84,8 +84,8 @@ const ProgramsPage: React.FunctionComponent<PageProps> = ({ data }) => {
             that teach the basics with live coding, troubleshooting sessions,
             and videos.
           </p>
-          <div className="grid gap-10 md:grid-cols-8">
-            <div className="w-full h-full col-span-3 bg-white shadow-black ">
+          <div className="grid gap-10 align-top md:grid-cols-8">
+            <div className="self-start w-full col-span-3 bg-white shadow-black ">
               <StaticImage
                 className="h-full"
                 src="../assets/programs-beginner-coding-camp.png"
@@ -172,15 +172,16 @@ const ProgramsPage: React.FunctionComponent<PageProps> = ({ data }) => {
               />
             </div>
             <div className="col-span-5 font-body">
-              <h3 className="flex flex-wrap items-center text-2xl font-body font-bold gap-x-4">
+              <h3 className="flex flex-wrap items-center text-2xl font-bold font-body gap-x-4">
                 How to start a coding project!
                 <span className="py-1 pl-3 pr-4 text-sm font-light text-white rounded-full bg-gradient-to-r from-darkIris to-iris">
                   <span className="mr-1">📼</span> New video
                 </span>
               </h3>
 
-              <p className="font-light mb-8">
-                Want to start a project but don’t know where to start? We created a video with tips on how to get started!
+              <p className="mb-8 font-light">
+                Want to start a project but don’t know where to start? We
+                created a video with tips on how to get started!
               </p>
               <Link to="/programs/start-a-project">
                 <IrisLinkButton>Learn more</IrisLinkButton>
@@ -208,10 +209,11 @@ const ProgramsPage: React.FunctionComponent<PageProps> = ({ data }) => {
             {(
               data as { allMarkdownRemark: { nodes: Array<Program> } }
             ).allMarkdownRemark.nodes
-              .filter(
-                ({ frontmatter: { date } }) =>
-                  !date || new Date(date) < new Date()
-              )
+              .filter(({ frontmatter: { date } }) => {
+                return (
+                  !date || parse(date, "yyyy-mm-dd", new Date()) < new Date()
+                )
+              })
               .map(program => (
                 <ProgramCard {...program} />
               ))}
@@ -237,9 +239,9 @@ export const UpcomingProgramsSection: React.FunctionComponent<{
       </p>
       <div className="grid items-stretch justify-center gap-4 lg:flex lg:flex-wrap">
         {programs
-          .filter(
-            ({ frontmatter: { date } }) => date && new Date(date) > new Date()
-          )
+          .filter(({ frontmatter: { date } }) => {
+            return date && parse(date, "yyyy-mm-dd", new Date())
+          })
           .map(program => (
             <ProgramCard key={program.frontmatter.title} {...program} />
           ))}
@@ -261,7 +263,7 @@ export interface Program {
     blurb?: string
     creators?: Array<string>
     tags?: Array<string>
-    date?: Date
+    date?: string
     slug?: string
     app_link?: string
   }
@@ -273,7 +275,7 @@ const ProgramCard: React.FunctionComponent<Program> = ({
 }) => {
   // TODO: there is a bit of an edge case here, it is upcomong if it hasn't happened but idk what happens if applications are closed? or what time the event happens at.
 
-  const parsedDate = new Date(date || 0) //parse(date, "yyyy-mm-dd", new Date())
+  const parsedDate = date ? parse(date, "yyyy-mm-dd", new Date()) : null //parse(date, "yyyy-mm-dd", new Date())
   return (
     <Link to={`/programs/${slug}`}>
       <div className="max-w-sm p-5 text-left bg-white border border-black font-body hover:shadow-black hover:bg-gray-100 hover:drop-shadow-xl hover:!text-black h-full flex-col flex">
@@ -285,13 +287,11 @@ const ProgramCard: React.FunctionComponent<Program> = ({
           </div>
         ) : null}
         <div className="font-medium">{title}</div>
-        {date ? <div>{format(parsedDate, "MMMM do, yyyy")}</div> : null}
+        {parsedDate ? <div>{format(parsedDate, "MMMM do, yyyy")}</div> : null}
         <p className="mb-5 font-light">{blurb}</p>
         {app_link ? (
-          <div className="mt-auto text-left text-xs">
-            <Link to={`/programs/${slug}`}>
-              Read more >
-            </Link>
+          <div className="mt-auto text-xs text-left">
+            <Link to={`/programs/${slug}`}>Read more {">"}</Link>
           </div>
         ) : null}
       </div>
@@ -339,7 +339,7 @@ export const pageQuery = graphql`
           title
           tags
           blurb
-          date
+          date(formatString: "yyyy-MM-DD")
           slug
           app_link
         }
