@@ -224,7 +224,7 @@ const ProgramsPage: React.FunctionComponent<PageProps> = ({ data }) => {
             ).allMarkdownRemark.nodes
               .filter(({ frontmatter: { date } }) => {
                 return (
-                  !date || parse(date, "yyyy-mm-dd", new Date()) < new Date()
+                  !date || parse(date, "yyyy-MM-dd", new Date()) < new Date()
                 )
               })
               .map(program => (
@@ -253,7 +253,8 @@ export const UpcomingProgramsSection: React.FunctionComponent<{
       <div className="grid items-stretch justify-center gap-4 lg:flex lg:flex-wrap">
         {programs
           .filter(({ frontmatter: { date } }) => {
-            return date && parse(date, "yyyy-mm-dd", new Date())
+            console.log(date)
+            return date && parse(date, "yyyy-MM-dd", new Date())
           })
           .map(program => (
             <ProgramCard key={program.frontmatter.title} {...program} />
@@ -288,7 +289,7 @@ const ProgramCard: React.FunctionComponent<Program> = ({
 }) => {
   // TODO: there is a bit of an edge case here, it is upcomong if it hasn't happened but idk what happens if applications are closed? or what time the event happens at.
 
-  const parsedDate = date ? parse(date, "yyyy-mm-dd", new Date()) : null //parse(date, "yyyy-mm-dd", new Date())
+  const parsedDate = date ? parse(date, "yyyy-MM-dd", new Date()) : null //parse(date, "yyyy-MM-dd", new Date())
   return (
     <Link to={`/programs/${slug}`}>
       <div className="max-w-sm p-5 text-left bg-white border border-black font-body hover:shadow-black hover:bg-gray-100 hover:drop-shadow-xl hover:!text-black h-full flex-col flex">
