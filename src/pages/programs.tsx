@@ -95,11 +95,12 @@ const ProgramsPage: React.FunctionComponent<PageProps> = ({ data }) => {
             <div className="col-span-5">
               <h3 className="flex flex-wrap items-center text-2xl font-bold gap-x-4 font-body">
                 Virtual Beginner Coding Camp
-                <Tag key={"2"} tag={"🔔 Upcoming Event"}/>
+                <Tag key={"2"} tag={"🔔 Upcoming Event"} />
                 <Tag key={"1"} tag={"💻 Workshop"} />
               </h3>
-              <p className="font-light my-3">
-                Learn the basics of coding through videos, live-coding sessions, collaboration, and daily office hours.
+              <p className="my-3 font-light">
+                Learn the basics of coding through videos, live-coding sessions,
+                collaboration, and daily office hours.
               </p>
               <div className="font-bold">Important Dates:</div>
               <ul className="mb-4 list-disc list-inside">
@@ -240,7 +241,6 @@ export const UpcomingProgramsSection: React.FunctionComponent<{
       <div className="grid items-stretch justify-center gap-4 lg:flex lg:flex-wrap">
         {programs
           .filter(({ frontmatter: { date } }) => {
-            console.log(date)
             return date && parse(date, "yyyy-MM-dd", new Date())
           })
           .map(program => (
@@ -313,7 +313,7 @@ export const Tag: React.FunctionComponent<{ tag: string }> = ({ tag }) => {
           ? "bg-blue-600 "
           : tag === "🧩 Byte-sized Series"
           ? "bg-green-600"
-          : tag === "🔔 Upcoming Event" 
+          : tag === "🔔 Upcoming Event"
           ? "bg-iris"
           : ""
       } font-mono text-white text-xs px-2 py-1 rounded-full font-extralight`}
