@@ -87,6 +87,16 @@ export const Header: React.FunctionComponent<{ bg?: "light" | "dark" }> = ({
       </li>
       <li>
         <Link
+          className={`${
+            bg === "dark" ? "hover:text-icterine" : "hover:text-iris"
+          }`}
+          to="/contact-us"
+        >
+          Contact Us
+        </Link>
+      </li>
+      <li>
+        <Link
           className={`normal-case ${
             bg === "dark" ? "hover:text-icterine" : "hover:text-iris"
           }`}
@@ -228,7 +238,7 @@ export const Footer = () => (
           src="../assets/sponsor-uoft.png"
         />
       </div>
-    </Marquee> */}
+  </Marquee>*/}
 
     <div className="flex justify-center h-10 gap-3 mb-4 text-gray-400 content-middle">
       <a
@@ -260,9 +270,9 @@ export const Footer = () => (
         <Instagram className="h-full" />
       </a>
     </div>
-    <p className="mb-6 font-mono text-center text-gray-400">Contact Us: info@hercodecamp.com</p>
-    <p className="mb-6 font-mono text-center text-gray-400">© 2022 HER CODE CAMP</p>
-    <p className="text-sm font-light text-center ">
+    <p className="mb-3 font-mono text-center text-gray-400"><a href="mailto:info@hercodecamp.com?subject=Question about HER CODE CAMP">info@hercodecamp.com</a></p>
+    <p className="mb-3 font-mono text-center text-gray-400">© 2022 HER CODE CAMP</p>
+    <p className="text-sm mb-3 font-light text-center ">
       <span className="mr-1 text-gray-600 font-body">built by</span>
       <a
         className="font-mono font-normal text-opacity-80 text-icterine"

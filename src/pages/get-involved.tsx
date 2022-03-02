@@ -92,11 +92,8 @@ const VolunteerPage: React.FunctionComponent<PageProps> = () => (
           This role is what you make it. We're looking for ways to become a better, more accessible community and we would love to hear from you.
           The time commitment is ~2hrs weekly.
           </p>
-          <p className="font-semibold mb-5">Deadline to apply is February 9th</p>
+          <p className="font-semibold mb-5">Applications are now closed!</p>
         </div>
-        <Link to="https://forms.gle/jv7JssaVfrG44zBWA">
-          <IcterineLinkButton>Apply Now</IcterineLinkButton>
-        </Link>
       </div>
     </section>
     <MailingListSection />

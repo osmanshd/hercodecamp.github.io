@@ -5,7 +5,6 @@ title: "High School Applied Coding Challenge 2022"
 blurb: Learn about coding in the finance industry
 creators:
   - Rotman FRT-Lab with support from HER CODE CAMP
-date: 2022-02-05
 slug: applied-coding-challenge
 app_link: ""
 ---
