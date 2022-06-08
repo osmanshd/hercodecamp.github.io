@@ -7,7 +7,6 @@ creators:
 blurb: Learn the basics of coding through videos, live-coding sessions, collaboration, and daily office hours.
 slug: beginner-coding-camp
 app_link: "https://forms.gle/96SEUuhVbQAnAroXA"
-date: 2022-03-15
 ---
 
 ![poster](/programs-beginner-coding-camp.png "beginner coding camp")
