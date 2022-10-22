@@ -230,33 +230,36 @@ const ProgramsPage: React.FunctionComponent<PageProps> = ({ data }) => {
 export const UpcomingProgramsSection: React.FunctionComponent<{
   programs: Array<Program>
   withMore?: boolean
-}> = ({ programs, withMore = false }) => (
-  <section className="px-8 py-20 bg-radial-gradient-c from-icterine to-white">
-    <div className="text-center">
-      <h2 className="mb-4 font-mono text-3xl font-bold">Upcoming Programs</h2>
-      <p className="mb-12 text-lg font-light font-body">
-        For beginners with little to no coding experience. Oh, and they’re all
-        free.
-      </p>
-      <div className="grid items-stretch justify-center gap-4 lg:flex lg:flex-wrap">
-        {programs
-          .filter(({ frontmatter: { date } }) => {
-            return date && parse(date, "yyyy-MM-dd", new Date())
-          })
-          .map(program => (
-            <ProgramCard key={program.frontmatter.title} {...program} />
-          ))}
-      </div>
-      {withMore ? (
-        <div className="mt-10 text-lg font-bold uppercase font-body text-iris">
-          <Link to="/programs" className="hover:underline hover:text-black">
-            More {">"}
-          </Link>
+}> = ({ programs, withMore = false }) =>
+  programs.filter(({ frontmatter: { date } }) => {
+    return date && parse(date, "yyyy-MM-dd", new Date()) >= new Date()
+  }).length > 0 ? (
+    <section className="px-8 py-20 bg-radial-gradient-c from-icterine to-white">
+      <div className="text-center">
+        <h2 className="mb-4 font-mono text-3xl font-bold">Upcoming Programs</h2>
+        <p className="mb-12 text-lg font-light font-body">
+          For beginners with little to no coding experience. Oh, and they’re all
+          free.
+        </p>
+        <div className="grid items-stretch justify-center gap-4 lg:flex lg:flex-wrap">
+          {programs
+            .filter(({ frontmatter: { date } }) => {
+              return date && parse(date, "yyyy-MM-dd", new Date()) >= new Date()
+            })
+            .map(program => (
+              <ProgramCard key={program.frontmatter.title} {...program} />
+            ))}
         </div>
-      ) : null}
-    </div>
-  </section>
-)
+        {withMore ? (
+          <div className="mt-10 text-lg font-bold uppercase font-body text-iris">
+            <Link to="/programs" className="hover:underline hover:text-black">
+              More {">"}
+            </Link>
+          </div>
+        ) : null}
+      </div>
+    </section>
+  ) : null
 
 export interface Program {
   frontmatter: {
