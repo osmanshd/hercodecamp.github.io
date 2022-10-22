@@ -18,6 +18,7 @@ import {
 } from "@styled-icons/boxicons-logos"
 import Banner from "./Banner"
 import { ChevronCompactDown } from "@styled-icons/bootstrap"
+import { IcterineLinkButton } from "./LinkButton"
 
 // TODO: add seo (helmet descriptions etc.)
 
@@ -104,6 +105,11 @@ export const Header: React.FunctionComponent<{ bg?: "light" | "dark" }> = ({
         >
           FAQs
         </Link>
+      </li>
+      <li>
+          <Link to="https://www.paypal.com/donate?hosted_button_id=4PWA9YFNDUZ3U">
+            <IcterineLinkButton className="flex border border-solid hover:bg-transparent hover:border-icterine">Donate<div className="flex ml-2 animate-pulse">💖</div> </IcterineLinkButton>
+          </Link>
       </li>
     </ul>
   </nav>
