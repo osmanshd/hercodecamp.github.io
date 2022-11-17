@@ -36,17 +36,15 @@ export const Header: React.FunctionComponent<{ bg?: "light" | "dark" }> = ({
 }) => (
   <nav className="w-full px-8 pt-8 mx-auto max-w-7xl">
     <ul
-      className={`flex flex-wrap items-center justify-center gap-4  uppercase align-middle md:justify-end md:flex-nowrap whitespace-nowrap font-light font-body ${
-        bg === "dark" ? "text-gray-200" : "text-gray-800"
-      }`}
+      className={`flex flex-wrap items-center justify-center gap-4  uppercase align-middle md:justify-end md:flex-nowrap whitespace-nowrap font-light font-body ${bg === "dark" ? "text-gray-200" : "text-gray-800"
+        }`}
     >
       <li className="w-full text-center flex-full md:text-left md:w-auto">
         <Link
-          className={`${
-            bg === "dark"
+          className={`${bg === "dark"
               ? "text-white hover:text-icterine"
               : "text-black hover:text-iris"
-          }`}
+            }`}
           to="/"
         >
           {/* TODO: add a fun glow effect to this one. */}
@@ -58,9 +56,8 @@ export const Header: React.FunctionComponent<{ bg?: "light" | "dark" }> = ({
       </li>
       <li>
         <Link
-          className={`${
-            bg === "dark" ? "hover:text-icterine" : "hover:text-iris"
-          }`}
+          className={`${bg === "dark" ? "hover:text-icterine" : "hover:text-iris"
+            }`}
           to="/about"
         >
           About Us
@@ -68,9 +65,8 @@ export const Header: React.FunctionComponent<{ bg?: "light" | "dark" }> = ({
       </li>
       <li>
         <Link
-          className={`${
-            bg === "dark" ? "hover:text-icterine" : "hover:text-iris"
-          }`}
+          className={`${bg === "dark" ? "hover:text-icterine" : "hover:text-iris"
+            }`}
           to="/programs"
         >
           Programs
@@ -78,9 +74,8 @@ export const Header: React.FunctionComponent<{ bg?: "light" | "dark" }> = ({
       </li>
       <li>
         <Link
-          className={`${
-            bg === "dark" ? "hover:text-icterine" : "hover:text-iris"
-          }`}
+          className={`${bg === "dark" ? "hover:text-icterine" : "hover:text-iris"
+            }`}
           to="/get-involved"
         >
           Get Involved
@@ -88,9 +83,8 @@ export const Header: React.FunctionComponent<{ bg?: "light" | "dark" }> = ({
       </li>
       <li>
         <Link
-          className={`${
-            bg === "dark" ? "hover:text-icterine" : "hover:text-iris"
-          }`}
+          className={`${bg === "dark" ? "hover:text-icterine" : "hover:text-iris"
+            }`}
           to="/contact-us"
         >
           Contact Us
@@ -98,18 +92,17 @@ export const Header: React.FunctionComponent<{ bg?: "light" | "dark" }> = ({
       </li>
       <li>
         <Link
-          className={`normal-case ${
-            bg === "dark" ? "hover:text-icterine" : "hover:text-iris"
-          }`}
+          className={`normal-case ${bg === "dark" ? "hover:text-icterine" : "hover:text-iris"
+            }`}
           to="/faq"
         >
           FAQs
         </Link>
       </li>
       <li>
-          <Link to="https://www.paypal.com/donate?hosted_button_id=4PWA9YFNDUZ3U">
-            <IcterineLinkButton className="flex border border-solid hover:bg-transparent hover:border-icterine">Donate<div className="flex ml-2 animate-pulse">💖</div> </IcterineLinkButton>
-          </Link>
+        <Link to="https://www.paypal.com/donate?hosted_button_id=4PWA9YFNDUZ3U">
+          <IcterineLinkButton className="flex border border-solid hover:bg-transparent hover:border-icterine">Donate<div className="flex ml-2 animate-pulse">💖</div> </IcterineLinkButton>
+        </Link>
       </li>
     </ul>
   </nav>
@@ -138,7 +131,7 @@ export const Hero: React.FunctionComponent = ({ children }) => (
         />
       </div>
     </div>
-    <Banner />
+    {/* <Banner /> */}
   </section>
 )
 

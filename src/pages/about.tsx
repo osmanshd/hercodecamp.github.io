@@ -45,10 +45,10 @@ const AboutUsPage: React.FunctionComponent<PageProps> = () => (
     </section>
     <section
       className="min-h-[75vh] py-14 md:pt-40 md:pb-60 bg-radial-gradient-br from-icterine to-iris"
-      // style={{
-      //   backgroundImage:
-      //     "radial-gradient(circle at 100% 100%, rgba(240,234,80,1) 0%, rgba(72,87,226,1) 50%)",
-      // }}
+    // style={{
+    //   backgroundImage:
+    //     "radial-gradient(circle at 100% 100%, rgba(240,234,80,1) 0%, rgba(72,87,226,1) 50%)",
+    // }}
     >
       <div className="grid max-w-5xl grid-cols-1 gap-10 px-12 mx-auto text-white md:gap-40 md:grid-cols-2">
         <div>
@@ -196,20 +196,20 @@ const AboutUsPage: React.FunctionComponent<PageProps> = () => (
                 linkedin: "https://www.linkedin.com/in/elyssabader/",
               },
             },
-            {
-              name: "Sabrina Abbott",
-              positions: ["Chief Communications Officer", "Secretary"],
-              bio: `Sabrina is a Humanities Lesson Writer for Study.com by day and a freelance artist by night; she is currently earning her certification to be an English as a Second Language teacher. She plans on completing Teacher's College and her M.Ed soon after. `,
-              image: (
-                <StaticImage
-                  src="../assets/people/Sabrina_Abbott.png"
-                  alt="Sabrina Abbott"
-                />
-              ),
-              socials: {
-                linkedin: "https://www.linkedin.com/in/sabrinamabbott/",
-              },
-            },
+            // {
+            //   name: "Sabrina Abbott",
+            //   positions: ["Chief Communications Officer", "Secretary"],
+            //   bio: `Sabrina is a Humanities Lesson Writer for Study.com by day and a freelance artist by night; she is currently earning her certification to be an English as a Second Language teacher. She plans on completing Teacher's College and her M.Ed soon after. `,
+            //   image: (
+            //     <StaticImage
+            //       src="../assets/people/Sabrina_Abbott.png"
+            //       alt="Sabrina Abbott"
+            //     />
+            //   ),
+            //   socials: {
+            //     linkedin: "https://www.linkedin.com/in/sabrinamabbott/",
+            //   },
+            // },
             {
               name: "Seungeun Yi",
               positions: ["Chief Learning Officer"],
@@ -237,6 +237,90 @@ const AboutUsPage: React.FunctionComponent<PageProps> = () => (
               socials: {
                 twitter: "https://twitter.com/martoskreto",
                 linkedin: "https://www.linkedin.com/in/martaskreta/",
+              },
+            },
+            {
+              name: "Jessie Thind",
+              positions: ["Chief Diversity, Equity, and Inclusion Officer"],
+              bio: `Jessie is completing her Master of Human Rights degree at the University of Manitoba, where she is researching ethics and bias in AI. Through her work with HER CODE CAMP, Jessie is committed to an anti-oppression framework while establishing an equitable and inclusive environment for students and the HCC team at large.`,
+              image: (
+                <StaticImage
+                  src="../assets/people/Jessie_Thind.png"
+                  alt="Jessie Thind"
+                />
+              ),
+              socials: {
+                linkedin: "www.linkedin.com/in/jessie-thind-9b719b11a",
+              },
+            },
+          ].map(({ image, name, positions, bio, socials }) => (
+            <div className="grid-cols-8 gap-4 md:grid font-body">
+              <div className="col-span-3 ">
+                <div className="relative">
+                  <div className="absolute bottom-0 left-0 right-0 bg-icterine aspect-w-10 aspect-h-8" />
+                  {image}
+                </div>
+              </div>
+              <div className="col-span-5">
+                <h3 className="text-lg font-bold">{name}</h3>
+                <div className="mb-2">
+                  <span className="font-medium text-gray-600 text-md">
+                    {positions.join(", ")}
+                  </span>
+                  <span className="inline-flex content-center gap-1 ml-1 text-gray-400">
+                    {Object.entries(socials).map(([social, value]) => (
+                      <a href={value}>
+                        <SocialImage
+                          className="h-4"
+                          social={social as Social}
+                        />
+                      </a>
+                    ))}
+                  </span>
+                </div>
+                <p className="text-sm text-justify text-gray-500 text-light">
+                  {bio}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <p className="pt-12">Past team members: Sabrina Abbott</p>
+      </div>
+    </section>
+    <section>
+      <div className="max-w-6xl px-8 py-12 mx-auto md:pb-20 md:pt-28 border border-t border-solid border-l-0 border-r-0 border-b-0">
+        <h2 className="mb-10 font-mono text-4xl font-bold text-center">
+          Our Advisors
+        </h2>
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
+          {[
+            // {
+            //   name: "Matt Walton",
+            //   positions: ["Head of Analytics & Insights - Automotive, Consumer Goods & Food at Google"],
+            //   bio: `Matt is currently a Technology Analyst at Accenture where she works primarily as a software developer to improve businesses. Prior to her time in industry, she worked in the intersection of Computer Science and Biology through research in cancer genomics and health care.`,
+            //   image: (
+            //     <StaticImage
+            //       src="../assets/people/Joanna_Pineda.png"
+            //       alt="Matt Walton"
+            //     />
+            //   ),
+            //   socials: {
+            //     linkedin: "https://www.linkedin.com/in/matthew-walton-110b553/",
+            //   },
+            // },
+            {
+              name: "Ellie Hajarian",
+              positions: ["Senior IT Manager, Enterprise Information Management at TD"],
+              bio: `Ellie has studied computer programming and been working in IT since starting her career – over 20 years now. Currently she is pursuing her Masters in Computer Science in Information Systems. Throughout her career she has been passionate to be an advocate for younger females in different stages of their lives and to help them build confidence, find their inner power and build an independent life. She is currently the chair of Women in Leadership committee at TD, and a member of Girls in STEM committee at TD.`,
+              image: (
+                <StaticImage
+                  src="../assets/people/Ellie_Hajarian.jpg"
+                  alt="Ellie Hajaria"
+                />
+              ),
+              socials: {
+                linkedin: "https://www.linkedin.com/in/ellie-hajarian/?originalSubdomain=ca",
               },
             },
           ].map(({ image, name, positions, bio, socials }) => (
