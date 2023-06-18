@@ -131,7 +131,7 @@ export const Hero: React.FunctionComponent = ({ children }) => (
         />
       </div>
     </div>
-    {/* <Banner /> */}
+    <Banner />
   </section>
 )
 

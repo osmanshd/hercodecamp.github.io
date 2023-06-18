@@ -295,20 +295,34 @@ const AboutUsPage: React.FunctionComponent<PageProps> = () => (
         </h2>
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
           {[
-            // {
-            //   name: "Matt Walton",
-            //   positions: ["Head of Analytics & Insights - Automotive, Consumer Goods & Food at Google"],
-            //   bio: `Matt is currently a Technology Analyst at Accenture where she works primarily as a software developer to improve businesses. Prior to her time in industry, she worked in the intersection of Computer Science and Biology through research in cancer genomics and health care.`,
-            //   image: (
-            //     <StaticImage
-            //       src="../assets/people/Joanna_Pineda.png"
-            //       alt="Matt Walton"
-            //     />
-            //   ),
-            //   socials: {
-            //     linkedin: "https://www.linkedin.com/in/matthew-walton-110b553/",
-            //   },
-            // },
+            {
+              name: "Matt Walton",
+              positions: ["Head of Analytics & Insights - Automotive, Consumer Goods & Food at Google"],
+              bio: `Matt is currently a Technology Analyst at Accenture where she works primarily as a software developer to improve businesses. Prior to her time in industry, she worked in the intersection of Computer Science and Biology through research in cancer genomics and health care.`,
+              image: (
+                <StaticImage
+                  src="../assets/people/Matt_Walton.jpeg"
+                  alt="Matt Walton"
+                />
+              ),
+              socials: {
+                linkedin: "https://www.linkedin.com/in/matthew-walton-110b553/",
+              },
+            },
+            {
+              name: "Jyotheeswar Arvind Manickavasagar",
+              positions: ["Technical Solutions Consultant at Google"],
+              bio: ``,
+              image: (
+                <StaticImage
+                  src="../assets/people/Jyotheeswar_Manickavasagar.jpeg"
+                  alt="Jyotheeswar Manickavasagar"
+                />
+              ),
+              socials: {
+                linkedin: "https://www.linkedin.com/in/jyotheeswararvind/",
+              },
+            },
             {
               name: "Ellie Hajarian",
               positions: ["Senior IT Manager, Enterprise Information Management at TD"],
@@ -321,6 +335,21 @@ const AboutUsPage: React.FunctionComponent<PageProps> = () => (
               ),
               socials: {
                 linkedin: "https://www.linkedin.com/in/ellie-hajarian/?originalSubdomain=ca",
+              },
+            },
+            {
+              name: "Michelle Craig",
+              
+              positions: ["Professor, Teaching Stream in the Department of Computer Science at the University of Toronto"],
+              bio: `Michelle is a member of the CS Education Research Group. When I am not an associate chair, my job is primarily teaching undergraduate courses. In the past I have supervised one PhD student and a number of undergraduate projects in Computing Education Research.`,
+              image: (
+                <StaticImage
+                  src="../assets/people/Michelle_Craig.jpg"
+                  alt="Michelle Craig"
+                />
+              ),
+              socials: {
+                linkedin: "https://ca.linkedin.com/in/michelle-craig-a9759719",
               },
             },
           ].map(({ image, name, positions, bio, socials }) => (

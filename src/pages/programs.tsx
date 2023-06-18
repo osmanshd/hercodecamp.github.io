@@ -77,7 +77,7 @@ const ProgramsPage: React.FunctionComponent<PageProps> = ({ data }) => {
       <section id="workshops" className="px-8 bg-icterine py-28">
         <div className="max-w-5xl mx-auto">
           <h2 className="mb-4 text-4xl font-bold text-center text-iris font-body">
-            Workshops
+            Workshops for 2023
           </h2>
           <p className="mb-6 text-lg font-light font-body">
             Coding is telling the computer what to do. We run coding workshops
@@ -94,21 +94,19 @@ const ProgramsPage: React.FunctionComponent<PageProps> = ({ data }) => {
             </div>
             <div className="col-span-5">
               <h3 className="flex flex-wrap items-center text-2xl font-bold gap-x-4 font-body">
-                Virtual Beginner Coding Camp
-                <Tag key={"2"} tag={"🔔 Upcoming Event"} />
+                Coming Soon
                 <Tag key={"1"} tag={"💻 Workshop"} />
               </h3>
               <p className="my-3 font-light">
-                Learn the basics of coding through videos, live-coding sessions,
-                collaboration, and daily office hours.
+                We are excited to be redesigning our programs for 2023!
               </p>
-              <div className="font-bold">Important Dates:</div>
-              <ul className="mb-4 list-disc list-inside">
+              {/* <div className="font-bold">Important Dates:</div> */}
+              {/* <ul className="mb-4 list-disc list-inside">
                 <li>Applications Open: February 2nd, 2022</li>
                 <li>Application Deadline: March 6th, 2022</li>
-              </ul>
-              <Link to="/programs/beginner-coding-camp">
-                <IrisLinkButton>Learn more</IrisLinkButton>
+              </ul> */}
+              <Link to="https://hercodecamp.us19.list-manage.com/subscribe?u=c27169d8995f9d493daf82c16&id=4169a6682f/">
+                <IrisLinkButton>Stay Tuned</IrisLinkButton>
               </Link>
             </div>
           </div>
