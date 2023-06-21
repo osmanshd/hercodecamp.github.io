@@ -298,7 +298,7 @@ const AboutUsPage: React.FunctionComponent<PageProps> = () => (
             {
               name: "Matt Walton",
               positions: ["Head of Analytics & Insights - Automotive, Consumer Goods & Food at Google"],
-              bio: `Matt is currently a Technology Analyst at Accenture where she works primarily as a software developer to improve businesses. Prior to her time in industry, she worked in the intersection of Computer Science and Biology through research in cancer genomics and health care.`,
+              bio: ``,
               image: (
                 <StaticImage
                   src="../assets/people/Matt_Walton.jpeg"
