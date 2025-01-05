@@ -162,7 +162,7 @@ const OpportunitiesSection: React.FunctionComponent = () => {
 
   const opportunities: Array<Opportunity> = [
     {
-      title: "Workshop Instructor",
+      title: "Workshop Instructor 2025 (Paid)",
       blurb: "Develop content and teach coding skills and soft skills.",
       description: `
 Our workshop creators develop content on coding skills and soft skills such as:
@@ -175,18 +175,7 @@ Our workshop creators develop content on coding skills and soft skills such as:
 Our campers love live-coding sessions where they can build projects. Formats can vary from a short video series to a multi-day in-person event.`,
     },
     {
-      title: "Chief Diversity and Inclusion Officer",
-      blurb: "Help the planning team create a more inclusive community",
-      description: `Lead, plan, actively manage and oversee long lasting community building efforts and continually incorporate and update diversity and inclusivity training for staff and all contractors
-
-- Run the ambassador program and delegate community building tasks
-- Coffee chats
-- Icebreakers during events
-- Curate training for team and volunteers that create an inclusive community
-`,
-    },
-    {
-      title: "Advisor",
+      title: "Advisor (Unpaid)",
       blurb:
         "Use your business, education, or technology experience to help grow our organization",
       description: `

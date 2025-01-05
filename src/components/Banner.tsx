@@ -2,8 +2,8 @@ import { Link } from "gatsby"
 import React from "react"
 
 const Banner: React.FunctionComponent = () => (
-  <div className="sticky top-0 py-2 text-center text-white bg-gray-900 justify-self-end font-extralight">
-    <Link to="/programs">⚠️ Fall 2023 Programming Coming Soon!</Link>
+  <div className="sticky top-0 py-4 text-center text-black bg-icterine justify-self-end font-bold font-mono text-xl">
+    <Link to="/programs/hey-chat">In 2024, our students created their own AI chatbots using LLMs, check out how they did it 🤖💖!</Link>
   </div>
 )
 
