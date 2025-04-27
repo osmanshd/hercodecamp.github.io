@@ -253,6 +253,72 @@ const AboutUsPage: React.FunctionComponent<PageProps> = () => (
                 linkedin: "www.linkedin.com/in/jessie-thind-9b719b11a",
               },
             },
+            {
+              name: "Silvia Lopez",
+              positions: ["Head of Logistics"],
+              bio: `Silvia studied Computer Engineering with a minor in AI at the University of Toronto. Her commitment lies in supporting women in STEM fields and cultivating the self-assurance of young people to confidently pursue their goals.`,
+              image: (
+                <StaticImage
+                  src="../assets/people/Silvia_Lopez.png"
+                  alt="Silvia Lopez"
+                />
+              ),
+              socials: {
+              },
+            },
+            {
+              name: "Sara Rwentambo",
+              positions: ["Event Lead"],
+              bio: `Sara is a User Experience Designer at the Ontario Government where she creates user-centered design solutions and conducts user research to enhance client satisfaction of business technologies. Through HER CODE CAMP, Sara aims to encourage girls to explore the tech field in a safe environment through engaging educational content and hands-on activities.`,
+              image: (
+                <StaticImage
+                  src="../assets/people/Sara_Rwentambo.png"
+                  alt="Sara Rwentambo"
+                />
+              ),
+              socials: {
+              },
+            },
+            {
+              name: "Summer Deng",
+              positions: ["Head of People"],
+              bio: `I am currently a Master’s student in Computer Science at the University of Toronto, focusing on Artificial Intelligence. Previously, I was an AI product manager at Tencent, where I built face recognition systems to solve online verification problems for businesses. Through HER CODE CAMP, I aim to inspire women in tech and promote AI for good.`,
+              image: (
+                <StaticImage
+                  src="../assets/people/Summer_Deng.png"
+                  alt="Summer Deng"
+                />
+              ),
+              socials: {
+              },
+            },
+            {
+              name: "Zaynab Jean-Charles",
+              positions: ["Head of Marketing + Communications", "Head of Community Building"],
+              bio: `Zaynab is a self-taught programmer with a passion for front-end web development driven by engaging UI/UX to make sites fun but functional. She strives to spark curiosity and creativity in newcomers to code through her activities at HER CODE CAMP.`,
+              image: (
+                <StaticImage
+                  src="../assets/people/girl_icon.png"
+                  alt="Zaynab Jean-Charles"
+                />
+              ),
+              socials: {
+              },
+            },
+            {
+              name: "Shahad Osman",
+              positions: ["Head of Marketing + Communications"],
+              bio: `Shahad is a computer science student at the University of Toronto and currently interning as a Junior Software Developer. As a former participant of HER CODE CAMP, she’s passionate about inspiring girls to explore coding and technology, just as she was once inspired to be where she is today.`,
+              image: (
+                <StaticImage
+                  src="../assets/people/Shahad_Osman.png"
+                  alt="Shahad Osman"
+                />
+              ),
+              socials: {
+                linkedin: "https://www.linkedin.com/in/shahadosman",
+              },
+            },
           ].map(({ image, name, positions, bio, socials }) => (
             <div className="grid-cols-8 gap-4 md:grid font-body">
               <div className="col-span-3 ">
