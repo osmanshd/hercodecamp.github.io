@@ -139,7 +139,7 @@ const AboutUsPage: React.FunctionComponent<PageProps> = () => (
             {
               name: "Joanna Pineda",
               positions: ["Founder", "CEO"],
-              bio: `Joanna is currently a Technology Analyst at Accenture where she works primarily as a software developer to improve businesses. Prior to her time in industry, she worked in the intersection of Computer Science and Biology through research in cancer genomics and health care.`,
+              bio: `Joanna is a Forward Deployed Software Engineer at Palantir. In 2018, she founded HER CODE CAMP, inspired by the women she met during her MSc in Computer Science at the University of Toronto, as well as the incredible women she encounters today. Joanna believes that by amplifying underrepresented voices and supporting women in technology, we have the best chance of solving the world's most challenging problems.`,
               image: (
                 <StaticImage
                   src="../assets/people/Joanna_Pineda.png"
@@ -151,51 +151,51 @@ const AboutUsPage: React.FunctionComponent<PageProps> = () => (
                 linkedin: "https://www.linkedin.com/in/joannadpineda/",
               },
             },
-            {
-              name: "Chantal Shaib",
-              positions: ["Chief Strategy Officer", "Chief Learning Officer"],
-              bio: `Chantal is a Ph.D. student in Computer Science at Northeastern University, where she spends her days thinking about how to use technology to model and understand biomedical data. Through HER CODE CAMP, Chantal hopes to push for diversity by providing accessible and inclusive spaces for students to get excited by technology.`,
-              image: (
-                <StaticImage
-                  src="../assets/people/Chantal_Shaib.png"
-                  alt="Chantal Shaib"
-                />
-              ),
-              socials: {
-                linkedin: "https://www.linkedin.com/in/chantal-s-088b24109/",
-              },
-            },
-            {
-              name: "Armande Ang Houle",
-              positions: ["Chief Operations Officer", "Treasurer"],
-              bio: `Armande is currently a data project coordinator at Genentech where she facilitates the use of genomic data for cancer biomarkers. Prior to her current role, Armande researched cancer transcriptomic and genomic evolution using computational approaches.`,
-              image: (
-                <StaticImage
-                  src="../assets/people/Armande_Ang_Houle.png"
-                  alt="Armande Ang Houle"
-                />
-              ),
-              socials: {
-                twitter: "https://twitter.com/armandeanghoule?lang=en",
-                linkedin:
-                  "https://www.linkedin.com/in/armande-ang-houle-95138687",
-              },
-            },
-            {
-              name: "Elyssa Bader",
-              positions: ["Chief Operations Officer", "Chief Strategy Officer"],
-              bio: `Elyssa Bader is a Ph.D. student in Molecular Genetics at the University of Toronto researching the effects of aging on immune cells. Through her work with HCC, Elyssa hopes to provide an inclusive community for students who are curious about computer science.`,
-              image: (
-                <StaticImage
-                  src="../assets/people/Elyssa_Bader.png"
-                  alt="Elyssa Bader"
-                />
-              ),
-              socials: {
-                twitter: "https://twitter.com/ElyssaBader",
-                linkedin: "https://www.linkedin.com/in/elyssabader/",
-              },
-            },
+            // {
+            //   name: "Chantal Shaib",
+            //   positions: ["Chief Strategy Officer", "Chief Learning Officer"],
+            //   bio: `Chantal is a Ph.D. student in Computer Science at Northeastern University, where she spends her days thinking about how to use technology to model and understand biomedical data. Through HER CODE CAMP, Chantal hopes to push for diversity by providing accessible and inclusive spaces for students to get excited by technology.`,
+            //   image: (
+            //     <StaticImage
+            //       src="../assets/people/Chantal_Shaib.png"
+            //       alt="Chantal Shaib"
+            //     />
+            //   ),
+            //   socials: {
+            //     linkedin: "https://www.linkedin.com/in/chantal-s-088b24109/",
+            //   },
+            // },
+            // {
+            //   name: "Armande Ang Houle",
+            //   positions: ["Chief Operations Officer", "Treasurer"],
+            //   bio: `Armande is currently a data project coordinator at Genentech where she facilitates the use of genomic data for cancer biomarkers. Prior to her current role, Armande researched cancer transcriptomic and genomic evolution using computational approaches.`,
+            //   image: (
+            //     <StaticImage
+            //       src="../assets/people/Armande_Ang_Houle.png"
+            //       alt="Armande Ang Houle"
+            //     />
+            //   ),
+            //   socials: {
+            //     twitter: "https://twitter.com/armandeanghoule?lang=en",
+            //     linkedin:
+            //       "https://www.linkedin.com/in/armande-ang-houle-95138687",
+            //   },
+            // },
+            // {
+            //   name: "Elyssa Bader",
+            //   positions: ["Chief Operations Officer", "Chief Strategy Officer"],
+            //   bio: `Elyssa Bader is a Ph.D. student in Molecular Genetics at the University of Toronto researching the effects of aging on immune cells. Through her work with HCC, Elyssa hopes to provide an inclusive community for students who are curious about computer science.`,
+            //   image: (
+            //     <StaticImage
+            //       src="../assets/people/Elyssa_Bader.png"
+            //       alt="Elyssa Bader"
+            //     />
+            //   ),
+            //   socials: {
+            //     twitter: "https://twitter.com/ElyssaBader",
+            //     linkedin: "https://www.linkedin.com/in/elyssabader/",
+            //   },
+            // },
             // {
             //   name: "Sabrina Abbott",
             //   positions: ["Chief Communications Officer", "Secretary"],
@@ -210,20 +210,20 @@ const AboutUsPage: React.FunctionComponent<PageProps> = () => (
             //     linkedin: "https://www.linkedin.com/in/sabrinamabbott/",
             //   },
             // },
-            {
-              name: "Seungeun Yi",
-              positions: ["Chief Learning Officer"],
-              bio: `Seungeun is a Machine Learning Scientist at Layer 6 AI, where she works on building data-driven solutions for TD Bank and does research in healthcare to improve patient care. Seungeun is committed to creating easy-to-access and diverse content for all students interested in tech.`,
-              image: (
-                <StaticImage
-                  src="../assets/people/Seungeun_Yi.png"
-                  alt="Seungeun Yi"
-                />
-              ),
-              socials: {
-                linkedin: "https://www.linkedin.com/in/seungeunyi/",
-              },
-            },
+            // {
+            //   name: "Seungeun Yi",
+            //   positions: ["Chief Learning Officer"],
+            //   bio: `Seungeun is a Machine Learning Scientist at Layer 6 AI, where she works on building data-driven solutions for TD Bank and does research in healthcare to improve patient care. Seungeun is committed to creating easy-to-access and diverse content for all students interested in tech.`,
+            //   image: (
+            //     <StaticImage
+            //       src="../assets/people/Seungeun_Yi.png"
+            //       alt="Seungeun Yi"
+            //     />
+            //   ),
+            //   socials: {
+            //     linkedin: "https://www.linkedin.com/in/seungeunyi/",
+            //   },
+            // },
             {
               name: "Marta Skreta",
               positions: ["Chief Learning Officer"],
@@ -239,20 +239,20 @@ const AboutUsPage: React.FunctionComponent<PageProps> = () => (
                 linkedin: "https://www.linkedin.com/in/martaskreta/",
               },
             },
-            {
-              name: "Jessie Thind",
-              positions: ["Chief Diversity, Equity, and Inclusion Officer"],
-              bio: `Jessie is completing her Master of Human Rights degree at the University of Manitoba, where she is researching ethics and bias in AI. Through her work with HER CODE CAMP, Jessie is committed to an anti-oppression framework while establishing an equitable and inclusive environment for students and the HCC team at large.`,
-              image: (
-                <StaticImage
-                  src="../assets/people/Jessie_Thind.png"
-                  alt="Jessie Thind"
-                />
-              ),
-              socials: {
-                linkedin: "www.linkedin.com/in/jessie-thind-9b719b11a",
-              },
-            },
+            // {
+            //   name: "Jessie Thind",
+            //   positions: ["Chief Diversity, Equity, and Inclusion Officer"],
+            //   bio: `Jessie is completing her Master of Human Rights degree at the University of Manitoba, where she is researching ethics and bias in AI. Through her work with HER CODE CAMP, Jessie is committed to an anti-oppression framework while establishing an equitable and inclusive environment for students and the HCC team at large.`,
+            //   image: (
+            //     <StaticImage
+            //       src="../assets/people/Jessie_Thind.png"
+            //       alt="Jessie Thind"
+            //     />
+            //   ),
+            //   socials: {
+            //     linkedin: "www.linkedin.com/in/jessie-thind-9b719b11a",
+            //   },
+            // },
             {
               name: "Silvia Lopez",
               positions: ["Head of Logistics"],
@@ -351,7 +351,7 @@ const AboutUsPage: React.FunctionComponent<PageProps> = () => (
             </div>
           ))}
         </div>
-        <p className="pt-12">Past team members: Sabrina Abbott</p>
+        <p className="pt-12">Past team members: Jessie Thind, Seungeun Yi, Elyssa Bader, Armande Ang Houle, Chantal Shaib, Sabrina Abbott</p>
       </div>
     </section>
     <section>
